@@ -42,7 +42,7 @@ export default function Layout({ children }: Props) {
 
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
+      <div className="min-h-screen flex flex-col bg-white">
 
         <Header />
 

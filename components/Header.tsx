@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
 
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/98 backdrop-blur-md shadow-md">
 
       <nav className="max-w-6xl mx-auto flex items-center justify-between py-5 px-6 lg:px-8">
 
