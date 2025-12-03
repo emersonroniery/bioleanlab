@@ -42,9 +42,7 @@ export default function Layout({ children }: Props) {
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-        <link rel="icon" type="image/png" href="/favicon.png" />
-
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="alternate icon" href="/favicon.svg" />
 
         {/* Google AdSense Script já está no _app.tsx */}
 
