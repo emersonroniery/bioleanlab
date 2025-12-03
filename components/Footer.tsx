@@ -22,9 +22,15 @@ export default function Footer() {
 
             </p>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 mb-2">
 
               Science-based weight loss and supplement insights.
+
+            </p>
+
+            <p className="text-xs text-gray-500">
+
+              Some links are affiliate links. We may earn a commission at no extra cost to you.
 
             </p>
 

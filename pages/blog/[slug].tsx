@@ -10,6 +10,12 @@ import { getPostBySlug, getPostSlugs, PostMeta } from "../../lib/posts";
 
 import AdBlock from "../../components/AdBlock";
 
+import Sidebar from "../../components/Sidebar";
+
+import AffiliateCTA from "../../components/AffiliateCTA";
+
+import Disclaimer from "../../components/Disclaimer";
+
 
 
 type Props = {
@@ -44,85 +50,137 @@ export default function Post({ post }: Props) {
 
 
 
-      <article className="max-w-4xl mx-auto py-12 px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-6 lg:px-8">
 
-        <header className="mb-12 pb-8 border-b border-gray-200">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
 
-          <div className="mb-4">
+          {/* Main Content */}
 
-            <time className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+          <article className="lg:col-span-8">
 
-              {new Date(post.meta.date).toLocaleDateString("en-US", {
+            <header className="mb-12 pb-8 border-b border-gray-200">
 
-                year: "numeric",
+              <div className="mb-4">
 
-                month: "long",
+                <time className="text-sm font-medium text-gray-500 uppercase tracking-wide">
 
-                day: "numeric",
+                  {new Date(post.meta.date).toLocaleDateString("en-US", {
 
-              })}
+                    year: "numeric",
 
-            </time>
+                    month: "long",
 
-          </div>
+                    day: "numeric",
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                  })}
 
-            {post.meta.title}
+                </time>
 
-          </h1>
+              </div>
 
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
 
-            {post.meta.description}
+                {post.meta.title}
 
-          </p>
+              </h1>
 
-          {post.meta.tags.length > 0 && (
+              <p className="text-xl text-gray-600 leading-relaxed mb-6">
 
-            <div className="flex flex-wrap gap-2">
+                {post.meta.description}
 
-              {post.meta.tags.map((tag) => (
+              </p>
 
-                <span
+              {post.meta.tags.length > 0 && (
 
-                  key={tag}
+                <div className="flex flex-wrap gap-2">
 
-                  className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-200"
+                  {post.meta.tags.map((tag) => (
 
-                >
+                    <span
 
-                  {tag}
+                      key={tag}
 
-                </span>
+                      className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-200"
 
-              ))}
+                    >
+
+                      {tag}
+
+                    </span>
+
+                  ))}
+
+                </div>
+
+              )}
+
+            </header>
+
+
+
+            {/* AdSense Top - After Header */}
+
+            <AdBlock slot="top" />
+
+
+
+            {/* Disclaimer */}
+
+            <Disclaimer />
+
+
+
+            {/* Main Content */}
+
+            <div
+
+              className="prose prose-lg prose-emerald max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:marker:text-emerald-600"
+
+              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+
+            />
+
+
+
+            {/* Affiliate CTA - Middle of Content (you can move this based on content) */}
+
+            <AffiliateCTA
+
+              productName="Top Metabolism Supplement"
+
+              description="This natural metabolism-supporting formula has been getting attention for its evidence-based ingredients."
+
+              ctaText="Check Price & Details"
+
+              affiliateUrl="https://SEU-LINK-AFILIADO-CLICKBANK-AQUI"
+
+            />
+
+
+
+            {/* AdSense Bottom - Before Footer */}
+
+            <AdBlock slot="bottom" />
+
+          </article>
+
+
+
+          {/* Sidebar */}
+
+          <aside className="lg:col-span-4">
+
+            <div className="sticky top-24">
+
+              <Sidebar />
 
             </div>
 
-          )}
+          </aside>
 
-        </header>
+        </div>
 
-
-
-        <AdBlock slot="top" />
-
-
-
-        <div
-
-          className="prose prose-lg prose-emerald max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:marker:text-emerald-600"
-
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-
-        />
-
-
-
-        <AdBlock slot="bottom" />
-
-      </article>
+      </div>
 
     </Layout>
 

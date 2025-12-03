@@ -4,19 +4,41 @@ type Props = {
 
   slot?: string;
 
+  className?: string;
+
 };
 
 
 
-export default function AdBlock({ slot }: Props) {
+export default function AdBlock({ slot, className = "" }: Props) {
 
   return (
 
-    <div className="my-6 w-full border border-dashed border-gray-300 rounded-md p-4 text-center text-xs text-gray-500">
+    <div className={`my-8 w-full ${className}`}>
 
-      {/* Depois você substitui isso pelo código do AdSense */}
+      <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 bg-gray-50 text-center">
 
-      Ad space {slot ? `(${slot})` : ""}
+        <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+
+          Advertisement
+
+        </div>
+
+        <div className="text-sm text-gray-400">
+
+          {/* Depois você substitui isso pelo código do AdSense */}
+
+          Ad space {slot ? `(${slot})` : ""}
+
+        </div>
+
+        <div className="mt-4 text-xs text-gray-400">
+
+          Replace with Google AdSense code
+
+        </div>
+
+      </div>
 
     </div>
 
