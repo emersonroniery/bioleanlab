@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import { PostMeta } from "../lib/posts";
 
+import { formatDate } from "../lib/dateUtils";
+
 
 
 export default function PostCard({ post }: { post: PostMeta }) {
@@ -25,15 +27,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
             <time className="text-xs font-medium text-gray-500 uppercase tracking-wide">
 
-              {new Date(post.date).toLocaleDateString("en-US", {
-
-                year: "numeric",
-
-                month: "short",
-
-                day: "numeric",
-
-              })}
+              {formatDate(post.date)}
 
             </time>
 

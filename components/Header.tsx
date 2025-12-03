@@ -16,7 +16,7 @@ export default function Header() {
 
           <span className="text-2xl font-bold tracking-tight text-gray-900 group-hover:text-emerald-600 transition-colors">
 
-            BioLean<span className="text-emerald-600">Lab</span>
+            <span>BioLean</span><span className="text-emerald-600">Lab</span>
 
           </span>
 

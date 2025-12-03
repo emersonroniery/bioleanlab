@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
         crossOrigin="anonymous"
 
-        strategy="afterInteractive"
+        strategy="lazyOnload"
 
       />
 

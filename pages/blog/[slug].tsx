@@ -8,6 +8,8 @@ import { GetStaticProps, GetStaticPaths } from "next";
 
 import { getPostBySlug, getPostSlugs, PostMeta } from "../../lib/posts";
 
+import { formatDateLong } from "../../lib/dateUtils";
+
 import AdBlock from "../../components/AdBlock";
 
 import Sidebar from "../../components/Sidebar";
@@ -64,15 +66,7 @@ export default function Post({ post }: Props) {
 
                 <time className="text-sm font-medium text-gray-500 uppercase tracking-wide">
 
-                  {new Date(post.meta.date).toLocaleDateString("en-US", {
-
-                    year: "numeric",
-
-                    month: "long",
-
-                    day: "numeric",
-
-                  })}
+                  {formatDateLong(post.meta.date)}
 
                 </time>
 
