@@ -1,26 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./posts/**/*.{md,mdx}",
   ],
   theme: {
-    extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: 'none',
-            color: '#374151',
-            a: {
-              color: '#059669',
-              '&:hover': {
-                color: '#047857',
-              },
-            },
-          },
-        },
-      },
-    },
+    extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
 };
