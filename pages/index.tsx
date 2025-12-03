@@ -47,9 +47,9 @@ export default function Home({ latestPosts }: Props) {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-white to-emerald-50/30"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-50/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-white to-emerald-50/20"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-50/15 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
         
         <div className="relative max-w-7xl mx-auto py-20 sm:py-28 px-6 lg:px-8">
           <div className="text-center mb-16 max-w-4xl mx-auto">
