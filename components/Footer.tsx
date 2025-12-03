@@ -8,19 +8,67 @@ export default function Footer() {
 
   return (
 
-    <footer className="border-t bg-white mt-10">
+    <footer className="border-t border-gray-200 bg-white mt-20">
 
-      <div className="max-w-5xl mx-auto py-6 px-4 text-xs text-gray-500 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div className="max-w-6xl mx-auto py-10 px-6 lg:px-8">
 
-        <p>© {new Date().getFullYear()} BioLeanLab. All rights reserved.</p>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
 
-        <div className="flex gap-4">
+          <div>
 
-          <Link href="/privacy-policy">Privacy Policy</Link>
+            <p className="text-sm text-gray-600 font-medium mb-1">
 
-          <Link href="/terms-of-use">Terms of Use</Link>
+              © {new Date().getFullYear()} BioLeanLab. All rights reserved.
 
-          <Link href="/contact">Contact</Link>
+            </p>
+
+            <p className="text-xs text-gray-500">
+
+              Science-based weight loss and supplement insights.
+
+            </p>
+
+          </div>
+
+          <div className="flex flex-wrap gap-6 text-sm">
+
+            <Link 
+
+              href="/privacy-policy" 
+
+              className="text-gray-600 hover:text-emerald-600 transition-colors"
+
+            >
+
+              Privacy Policy
+
+            </Link>
+
+            <Link 
+
+              href="/terms-of-use" 
+
+              className="text-gray-600 hover:text-emerald-600 transition-colors"
+
+            >
+
+              Terms of Use
+
+            </Link>
+
+            <Link 
+
+              href="/contact" 
+
+              className="text-gray-600 hover:text-emerald-600 transition-colors"
+
+            >
+
+              Contact
+
+            </Link>
+
+          </div>
 
         </div>
 

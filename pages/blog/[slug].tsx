@@ -44,33 +44,43 @@ export default function Post({ post }: Props) {
 
 
 
-      <article className="max-w-3xl mx-auto py-12">
+      <article className="max-w-4xl mx-auto py-12 px-6 lg:px-8">
 
-        <header className="mb-8">
+        <header className="mb-12 pb-8 border-b border-gray-200">
 
-          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4">
+          <div className="mb-4">
+
+            <time className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+
+              {new Date(post.meta.date).toLocaleDateString("en-US", {
+
+                year: "numeric",
+
+                month: "long",
+
+                day: "numeric",
+
+              })}
+
+            </time>
+
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
 
             {post.meta.title}
 
           </h1>
 
-          <p className="text-xs text-gray-400 mb-2">
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">
 
-            {new Date(post.meta.date).toLocaleDateString("en-US", {
-
-              year: "numeric",
-
-              month: "long",
-
-              day: "numeric",
-
-            })}
+            {post.meta.description}
 
           </p>
 
           {post.meta.tags.length > 0 && (
 
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2">
 
               {post.meta.tags.map((tag) => (
 
@@ -78,7 +88,7 @@ export default function Post({ post }: Props) {
 
                   key={tag}
 
-                  className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                  className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-200"
 
                 >
 
@@ -102,7 +112,7 @@ export default function Post({ post }: Props) {
 
         <div
 
-          className="prose prose-sm max-w-none"
+          className="prose prose-lg prose-emerald max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:marker:text-emerald-600"
 
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
 

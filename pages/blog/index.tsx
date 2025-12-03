@@ -42,11 +42,21 @@ export default function Blog({ posts }: Props) {
 
 
 
-      <section className="max-w-5xl mx-auto py-12">
+      <section className="max-w-6xl mx-auto py-16 px-6 lg:px-8">
 
-        <h1 className="text-3xl sm:text-4xl font-extrabold mb-8">Blog</h1>
+        <div className="mb-12">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Blog</h1>
+
+          <p className="text-lg text-gray-600">
+
+            All articles about weight loss, metabolism, and supplements.
+
+          </p>
+
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
           {posts.map((post) => (
 

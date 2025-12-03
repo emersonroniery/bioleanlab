@@ -38,11 +38,11 @@ export default function Layout({ children }: Props) {
 
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-slate-50">
+      <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
 
         <Header />
 
-        <main className="flex-1 px-4 sm:px-6 lg:px-0">
+        <main className="flex-1">
 
           {children}
 

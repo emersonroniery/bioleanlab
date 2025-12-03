@@ -10,6 +10,8 @@ import { getAllPosts, PostMeta } from "../lib/posts";
 
 import PostCard from "../components/PostCard";
 
+import Link from "next/link";
+
 
 
 type Props = {
@@ -42,45 +44,83 @@ export default function Home({ latestPosts }: Props) {
 
 
 
-      <section className="max-w-5xl mx-auto py-12">
+      <section className="max-w-6xl mx-auto py-16 px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-          <div>
+          <div className="space-y-6">
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold mb-4">
+            <div className="space-y-4">
 
-              Science-based insights for smarter weight loss.
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
 
-            </h1>
+                Science-based insights for smarter weight loss.
 
-            <p className="text-gray-600 mb-6">
+              </h1>
 
-              At BioLeanLab we break down research, habits and supplements so you
+              <p className="text-lg text-gray-600 leading-relaxed">
 
-              can make informed decisions about your health and metabolism – without
+                At BioLeanLab we break down research, habits and supplements so you
 
-              hype or miracle promises.
+                can make informed decisions about your health and metabolism – without
 
-            </p>
+                hype or miracle promises.
 
-            <ul className="text-sm text-gray-700 list-disc list-inside space-y-1 mb-6">
+              </p>
 
-              <li>Evidence-informed guides on metabolism and fat loss</li>
+            </div>
 
-              <li>Honest supplement reviews and comparisons</li>
+            <ul className="space-y-3 pt-4">
 
-              <li>Practical habits you can actually follow</li>
+              <li className="flex items-start gap-3">
+
+                <span className="mt-1.5 flex-shrink-0 w-2 h-2 bg-emerald-600 rounded-full"></span>
+
+                <span className="text-base text-gray-700">Evidence-informed guides on metabolism and fat loss</span>
+
+              </li>
+
+              <li className="flex items-start gap-3">
+
+                <span className="mt-1.5 flex-shrink-0 w-2 h-2 bg-emerald-600 rounded-full"></span>
+
+                <span className="text-base text-gray-700">Honest supplement reviews and comparisons</span>
+
+              </li>
+
+              <li className="flex items-start gap-3">
+
+                <span className="mt-1.5 flex-shrink-0 w-2 h-2 bg-emerald-600 rounded-full"></span>
+
+                <span className="text-base text-gray-700">Practical habits you can actually follow</span>
+
+              </li>
 
             </ul>
 
           </div>
 
-          <div className="bg-white border rounded-xl p-5 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 shadow-lg">
 
-            <h2 className="text-lg font-semibold mb-3">Latest articles</h2>
+            <div className="flex items-center justify-between mb-6">
 
-            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900">Latest articles</h2>
+
+              <Link 
+
+                href="/blog" 
+
+                className="text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+
+              >
+
+                View all →
+
+              </Link>
+
+            </div>
+
+            <div className="space-y-5">
 
               {latestPosts.map((post) => (
 

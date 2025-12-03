@@ -8,13 +8,13 @@ export default function Header() {
 
   return (
 
-    <header className="border-b bg-white">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm shadow-sm">
 
-      <nav className="max-w-5xl mx-auto flex items-center justify-between py-4 px-4">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between py-5 px-6 lg:px-8">
 
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 group">
 
-          <span className="text-xl font-bold tracking-tight">
+          <span className="text-2xl font-bold tracking-tight text-gray-900 group-hover:text-emerald-600 transition-colors">
 
             BioLean<span className="text-emerald-600">Lab</span>
 
@@ -22,13 +22,43 @@ export default function Header() {
 
         </Link>
 
-        <div className="flex gap-4 text-sm font-medium">
+        <div className="flex gap-6 text-sm font-medium">
 
-          <Link href="/blog">Blog</Link>
+          <Link 
 
-          <Link href="/reviews">Reviews</Link>
+            href="/blog" 
 
-          <Link href="/about">About</Link>
+            className="text-gray-700 hover:text-emerald-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-600 hover:after:w-full after:transition-all"
+
+          >
+
+            Blog
+
+          </Link>
+
+          <Link 
+
+            href="/reviews" 
+
+            className="text-gray-700 hover:text-emerald-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-600 hover:after:w-full after:transition-all"
+
+          >
+
+            Reviews
+
+          </Link>
+
+          <Link 
+
+            href="/about" 
+
+            className="text-gray-700 hover:text-emerald-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-600 hover:after:w-full after:transition-all"
+
+          >
+
+            About
+
+          </Link>
 
         </div>
 
