@@ -11,9 +11,27 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
   return (
 
-    <article className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+    <article className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-[2px] flex flex-col h-full">
 
-      <time className="text-[0.75rem] text-slate-400 mb-3 block">
+      {post.coverImage && post.coverImage !== null && (
+
+        <div className="mb-4 overflow-hidden rounded-xl bg-slate-100">
+
+          <img
+
+            src={post.coverImage}
+
+            alt={post.title}
+
+            className="h-40 w-full object-cover"
+
+          />
+
+        </div>
+
+      )}
+
+      <time className="text-[0.75rem] text-slate-400 mb-1 block">
 
         {new Date(post.date).toLocaleDateString("en-US", {
 
@@ -27,7 +45,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
       </time>
 
-      <h2 className="text-xl font-semibold text-slate-900 mb-3 hover:text-emerald-600 transition-colors duration-200">
+      <h2 className="text-lg md:text-xl font-semibold text-slate-900 mb-2 leading-snug hover:text-emerald-600 transition-colors duration-200">
 
         <Link href={`/blog/${post.slug}`}>
 
@@ -37,7 +55,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
       </h2>
 
-      <p className="text-slate-600 mb-4 line-clamp-3 leading-relaxed flex-grow">
+      <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-3 flex-grow">
 
         {post.description}
 
@@ -47,7 +65,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
         href={`/blog/${post.slug}`}
 
-        className="text-emerald-600 hover:text-emerald-700 font-medium text-sm mt-auto transition-colors duration-200"
+        className="text-sm font-semibold text-emerald-700 mt-auto transition-colors duration-200"
 
       >
 

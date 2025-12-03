@@ -52,7 +52,7 @@ export default function Layout({ children }: Props) {
 
         <Header />
 
-        <main className="flex-1 pt-14">
+        <main className="flex-1 pt-16">
 
           {children}
 

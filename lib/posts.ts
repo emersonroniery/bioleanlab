@@ -30,6 +30,8 @@ export type PostMeta = {
 
   featured?: boolean;
 
+  coverImage?: string | null;
+
 };
 
 
@@ -79,6 +81,8 @@ export async function getPostBySlug(slug: string) {
       tags: data.tags ?? [],
 
       featured: data.featured ?? false,
+
+      coverImage: data.coverImage ?? null,
 
     } as PostMeta,
 

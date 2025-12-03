@@ -28,33 +28,39 @@ export default function Reviews() {
 
 
 
-      <div className="max-w-3xl mx-auto py-12 px-4">
+      <div className="max-w-3xl mx-auto py-12 md:py-16 px-4">
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Supplement Reviews</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-6">Supplement Reviews</h1>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none prose-p:text-slate-700 prose-p:leading-relaxed">
 
-          <p className="text-gray-700 leading-relaxed mb-4">
+          <p className="mb-4">
 
-            At BioLeanLab, we provide honest and unbiased reviews of weight loss supplements and metabolism boosters. 
+            At BioLeanLab, we provide honest, evidence-based reviews of weight loss supplements and metabolism boosters. 
 
-            Our reviews are based on scientific research, ingredient analysis, and real-world feedback.
+            Our review process is rigorous: we analyze ingredient lists, examine scientific literature, assess safety profiles, 
 
-          </p>
-
-          <p className="text-gray-700 leading-relaxed mb-4">
-
-            We evaluate products based on their ingredients, scientific backing, safety profile, and value for money. 
-
-            Our goal is to help you make informed decisions about which supplements might be right for you.
+            and evaluate value for money. We don't make unrealistic promises—we tell you what the science actually says.
 
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="mb-4">
 
-            Check back regularly for new reviews, or browse our blog for detailed articles about specific supplements 
+            Every review follows our editorial standards: transparency about methodology, clear disclosure of potential 
 
-            and their effects on metabolism and weight loss.
+            conflicts of interest, and honest assessment of both benefits and limitations. We evaluate products based on 
+
+            their ingredients, scientific backing, safety profile, and real-world value.
+
+          </p>
+
+          <p>
+
+            Our goal is simple: help you make informed decisions about which supplements might be right for you, 
+
+            without the marketing fluff. Check back regularly for new reviews, or browse our blog for detailed articles 
+
+            about specific supplements and their effects on metabolism and weight loss.
 
           </p>
 

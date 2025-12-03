@@ -48,7 +48,7 @@ export default function Home({ latestPosts }: Props) {
 
       <section className="bg-white border-b border-slate-200">
 
-        <div className="max-w-2xl mx-auto py-14 md:py-20 px-4 text-center">
+        <div className="max-w-4xl mx-auto py-12 md:py-20 px-4 text-center">
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
 
@@ -58,7 +58,7 @@ export default function Home({ latestPosts }: Props) {
 
           </h1>
 
-          <p className="text-[1.05rem] text-slate-600 max-w-2xl mx-auto mt-3 leading-relaxed">
+          <p className="mt-4 text-[1.05rem] text-slate-600 max-w-2xl mx-auto leading-relaxed">
 
             Evidence-informed guides, honest supplement reviews, and practical habits 
 
@@ -66,11 +66,17 @@ export default function Home({ latestPosts }: Props) {
 
           </p>
 
+          <p className="text-xs uppercase tracking-wide text-emerald-700 mt-4">
+
+            Trusted, no-nonsense guidance for sustainable weight loss, metabolism support and honest supplement reviews.
+
+          </p>
+
           <Link
 
             href="/blog"
 
-            className="inline-block mt-6 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="mt-8 inline-flex items-center justify-center px-7 py-3 rounded-lg bg-emerald-600 text-white font-semibold shadow-lg hover:bg-emerald-700 hover:shadow-xl transition-all duration-200"
 
           >
 
@@ -86,11 +92,17 @@ export default function Home({ latestPosts }: Props) {
 
       {/* Latest Articles Section */}
 
-      <section className="max-w-6xl mx-auto py-16 px-4">
+      <section className="max-w-6xl mx-auto py-12 md:py-16 px-4">
 
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight">Latest Articles</h2>
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-2">Latest Articles</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <p className="text-sm text-slate-500 mb-8">
+
+          Recently published guides and reviews from the BioLeanLab editors.
+
+        </p>
+
+        <div className="grid gap-8 md:grid-cols-3">
 
           {latestPosts.map((post) => (
 

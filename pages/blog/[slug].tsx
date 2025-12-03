@@ -44,17 +44,17 @@ export default function Post({ post }: Props) {
 
 
 
-      <div className="max-w-3xl mx-auto py-14 md:py-16 px-4">
+      <div className="max-w-3xl mx-auto py-12 md:py-16 px-4">
 
         <article className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-sm">
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-3">
 
             {post.meta.title}
 
           </h1>
 
-          <time className="text-sm text-slate-500 block mb-6">
+          <time className="text-xs text-slate-400 block mb-6">
 
             {new Date(post.meta.date).toLocaleDateString("en-US", {
 
@@ -72,7 +72,11 @@ export default function Post({ post }: Props) {
 
           {/* AdBlock Top */}
 
-          <AdBlock slot="top" />
+          <div className="my-6">
+
+            <AdBlock slot="top-article" />
+
+          </div>
 
 
 
@@ -80,7 +84,7 @@ export default function Post({ post }: Props) {
 
           <div
 
-            className="prose prose-lg max-w-none prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-headings:tracking-tight prose-headings:text-slate-900 prose-p:text-slate-700"
+            className="prose prose-lg max-w-none prose-headings:tracking-tight prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-900"
 
             dangerouslySetInnerHTML={{ __html: post.contentHtml }}
 
@@ -90,7 +94,11 @@ export default function Post({ post }: Props) {
 
           {/* AdBlock Bottom */}
 
-          <AdBlock slot="bottom" />
+          <div className="my-6">
+
+            <AdBlock slot="bottom-article" />
+
+          </div>
 
         </article>
 

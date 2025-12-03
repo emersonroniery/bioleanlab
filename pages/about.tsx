@@ -28,35 +28,39 @@ export default function About() {
 
 
 
-      <div className="max-w-3xl mx-auto py-12 px-4">
+      <div className="max-w-3xl mx-auto py-12 md:py-16 px-4">
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">About BioLeanLab</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-6">About BioLeanLab</h1>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none prose-p:text-slate-700 prose-p:leading-relaxed">
 
-          <p className="text-gray-700 leading-relaxed mb-4">
+          <p className="mb-4">
 
-            BioLeanLab is dedicated to providing evidence-informed content about weight loss, metabolism, 
+            BioLeanLab is an independent editorial platform dedicated to providing evidence-informed content 
 
-            and supplements. Our mission is to help you make informed decisions about your health based on 
+            about weight loss, metabolism, and supplements. Our mission is to help you make informed decisions 
 
-            scientific research and practical insights.
-
-          </p>
-
-          <p className="text-gray-700 leading-relaxed mb-4">
-
-            We review supplements, analyze scientific studies, and share practical tips that you can actually 
-
-            implement in your daily life. Our content is designed for readers in the United States, United Kingdom, 
-
-            and Canada who are looking for trustworthy information about health and wellness.
+            about your health based on scientific research, transparent analysis, and practical insights.
 
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
+          <p className="mb-4">
 
-            Thank you for visiting BioLeanLab. We hope our content helps you on your health journey.
+            We believe in science, not hype. Our editorial team reviews supplements with a critical eye, 
+
+            analyzes peer-reviewed studies, and shares actionable tips grounded in real evidence. We don't 
+
+            promise miracles—we provide honest, no-nonsense guidance for sustainable results.
+
+          </p>
+
+          <p>
+
+            Our content is designed for readers in the United States, United Kingdom, and Canada who value 
+
+            transparency and evidence-based information. We maintain editorial independence and clearly disclose 
+
+            affiliate relationships when they exist.
 
           </p>
 

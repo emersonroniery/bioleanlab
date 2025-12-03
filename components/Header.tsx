@@ -16,9 +16,9 @@ export default function Header() {
 
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur shadow-sm">
 
-      <nav className="max-w-6xl mx-auto flex items-center justify-between py-5 px-4">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between py-4 md:py-5 px-4">
 
-        <Link href="/" className="text-2xl font-semibold text-slate-900 hover:text-emerald-600 transition-colors duration-200 tracking-tight">
+        <Link href="/" className="text-2xl font-bold text-slate-900 hover:text-emerald-600 transition-colors duration-200 tracking-tight">
 
           <span>BioLean</span><span className="text-emerald-600">Lab</span>
 
@@ -28,7 +28,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
 
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
+        <div className="hidden md:flex items-center gap-6 text-sm md:text-base font-medium text-slate-700">
 
           <Link href="/blog" className="hover:text-emerald-600 transition-colors duration-200">
 
