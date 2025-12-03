@@ -38,17 +38,7 @@ export default function Layout({ children }: Props) {
 
         />
 
-        {/* Google AdSense Verification Code */}
-
-        <script
-
-          async
-
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8722885403333098"
-
-          crossOrigin="anonymous"
-
-        ></script>
+        {/* Google AdSense Script já está no _app.tsx */}
 
       </Head>
 
