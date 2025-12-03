@@ -14,23 +14,13 @@ export default function Header() {
 
   return (
 
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white backdrop-blur-sm">
 
-      <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
 
-        <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
+        <Link href="/" className="text-xl font-semibold text-gray-900 hover:text-emerald-600 transition-colors">
 
-          <div className="w-9 h-9 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-200">
-
-            <span className="text-white font-black text-base">B</span>
-
-          </div>
-
-          <span className="text-lg font-bold tracking-tight text-gray-900 group-hover:text-emerald-600 transition-colors duration-200">
-
-            <span>BioLean</span><span className="text-emerald-600">Lab</span>
-
-          </span>
+          <span>BioLean</span><span className="text-emerald-600">Lab</span>
 
         </Link>
 
@@ -38,39 +28,27 @@ export default function Header() {
 
         {/* Desktop Navigation */}
 
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
 
-          <Link 
+          <Link href="/" className="hover:text-emerald-600 transition-colors">
 
-            href="/blog" 
+            Home
 
-            className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+          </Link>
 
-          >
+          <Link href="/blog" className="hover:text-emerald-600 transition-colors">
 
             Blog
 
           </Link>
 
-          <Link 
-
-            href="/reviews" 
-
-            className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
-
-          >
+          <Link href="/reviews" className="hover:text-emerald-600 transition-colors">
 
             Reviews
 
           </Link>
 
-          <Link 
-
-            href="/about" 
-
-            className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
-
-          >
+          <Link href="/about" className="hover:text-emerald-600 transition-colors">
 
             About
 
@@ -122,9 +100,23 @@ export default function Header() {
 
             <Link 
 
+              href="/" 
+
+              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
+
+              onClick={() => setMobileMenuOpen(false)}
+
+            >
+
+              Home
+
+            </Link>
+
+            <Link 
+
               href="/blog" 
 
-              className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
 
               onClick={() => setMobileMenuOpen(false)}
 
@@ -138,7 +130,7 @@ export default function Header() {
 
               href="/reviews" 
 
-              className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
 
               onClick={() => setMobileMenuOpen(false)}
 
@@ -152,7 +144,7 @@ export default function Header() {
 
               href="/about" 
 
-              className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
 
               onClick={() => setMobileMenuOpen(false)}
 

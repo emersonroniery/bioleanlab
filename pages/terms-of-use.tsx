@@ -22,9 +22,9 @@ export default function TermsOfUse() {
 
 
 
-      <article className="max-w-4xl mx-auto py-16 px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto py-12 px-4">
 
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
 
           Terms of Use
 
@@ -132,7 +132,7 @@ export default function TermsOfUse() {
 
         </div>
 
-      </article>
+      </div>
 
     </Layout>
 

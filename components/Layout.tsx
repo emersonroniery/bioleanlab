@@ -48,7 +48,7 @@ export default function Layout({ children }: Props) {
 
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-white antialiased">
+      <div className="min-h-screen flex flex-col bg-slate-50 antialiased">
 
         <Header />
 

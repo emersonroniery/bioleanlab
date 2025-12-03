@@ -42,29 +42,21 @@ export default function Blog({ posts }: Props) {
 
 
 
-      {/* Header Section */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-3">
-            Our Blog
-          </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed">
-            Science-based articles about weight loss, metabolism, and supplements 
-            to help you make informed health decisions.
-          </p>
-        </div>
-      </section>
+      <div className="max-w-6xl mx-auto py-12 px-4">
 
-      {/* Posts Grid */}
-      <section className="bg-gray-50 py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </div>
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h1>
+
+        <div className="grid md:grid-cols-3 gap-6">
+
+          {posts.map((post) => (
+
+            <PostCard key={post.slug} post={post} />
+
+          ))}
+
         </div>
-      </section>
+
+      </div>
 
     </Layout>
 
