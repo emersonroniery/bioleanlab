@@ -10,7 +10,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
   return (
 
-    <article className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 hover:-translate-y-2 overflow-hidden relative">
+    <article className="group bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-lg hover:border-emerald-300 transition-all duration-300 hover:-translate-y-1 overflow-hidden relative">
 
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/0 to-emerald-50/0 group-hover:from-emerald-50/50 group-hover:to-transparent transition-all duration-300 pointer-events-none"></div>
@@ -51,7 +51,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
         </div>
 
-        <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2 min-h-[3.5rem]">
+        <h2 className="text-lg font-bold text-gray-900 mb-2.5 group-hover:text-emerald-600 transition-colors line-clamp-2">
 
           <Link href={`/blog/${post.slug}`} className="hover:underline">
 
@@ -61,7 +61,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
         </h2>
 
-        <p className="text-sm text-gray-600 mb-5 line-clamp-3 leading-relaxed min-h-[4.5rem]">
+        <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">
 
           {post.description}
 
