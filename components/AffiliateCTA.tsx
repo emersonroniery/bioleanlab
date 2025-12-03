@@ -1,5 +1,9 @@
 // components/AffiliateCTA.tsx
 
+import { affiliateLinks } from "../lib/affiliateLinks";
+
+
+
 type Props = {
 
   title?: string;
@@ -12,23 +16,41 @@ type Props = {
 
   productName?: string;
 
+  productKey?: keyof typeof affiliateLinks;
+
 };
 
 
 
 export default function AffiliateCTA({
 
-  title = "Recommended Product",
+  title,
 
-  description = "This product has been researched and reviewed by our team.",
+  description,
 
-  ctaText = "Check Price & Details",
+  ctaText,
 
-  affiliateUrl = "https://SEU-LINK-AFILIADO-CLICKBANK-AQUI",
+  affiliateUrl,
 
-  productName = "Product Name",
+  productName,
+
+  productKey,
 
 }: Props) {
+
+  // Se productKey for fornecido, usa os dados do arquivo de configuração
+
+  const product = productKey ? affiliateLinks[productKey] : null;
+
+
+
+  const finalProductName = productName || product?.name || title || "Recommended Product";
+
+  const finalDescription = description || product?.description || "This product has been researched and reviewed by our team.";
+
+  const finalCtaText = ctaText || product?.ctaText || "Check Price & Details";
+
+  const finalAffiliateUrl = affiliateUrl || product?.url || "https://SEU-LINK-AFILIADO-CLICKBANK-AQUI";
 
   return (
 
@@ -60,29 +82,29 @@ export default function AffiliateCTA({
 
           <h3 className="text-xl font-bold text-gray-900 mb-2">
 
-            {productName || title}
+            {finalProductName}
 
           </h3>
 
           <p className="text-gray-600 mb-4 text-sm leading-relaxed">
 
-            {description}
+            {finalDescription}
 
           </p>
 
           <a
 
-            href={affiliateUrl}
+            href={finalAffiliateUrl}
 
             target="_blank"
 
-            rel="noopener noreferrer"
+            rel="noopener noreferrer sponsored"
 
             className="inline-block px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg"
 
           >
 
-            {ctaText} →
+            {finalCtaText} →
 
           </a>
 

@@ -144,17 +144,9 @@ export default function Post({ post }: Props) {
 
             {/* Affiliate CTA - Middle of Content (you can move this based on content) */}
 
-            <AffiliateCTA
+            {/* Use productKey para usar configuração de lib/affiliateLinks.ts */}
 
-              productName="Top Metabolism Supplement"
-
-              description="This natural metabolism-supporting formula has been getting attention for its evidence-based ingredients."
-
-              ctaText="Check Price & Details"
-
-              affiliateUrl="https://SEU-LINK-AFILIADO-CLICKBANK-AQUI"
-
-            />
+            <AffiliateCTA productKey="metabolismSupplement" />
 
 
 
