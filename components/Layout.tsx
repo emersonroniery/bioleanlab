@@ -2,6 +2,8 @@
 
 import Head from "next/head";
 
+import Script from "next/script";
+
 import Header from "./Header";
 
 import Footer from "./Footer";
@@ -35,6 +37,18 @@ export default function Layout({ children }: Props) {
           content="width=device-width, initial-scale=1"
 
         />
+
+        {/* Google AdSense Verification Code */}
+
+        <script
+
+          async
+
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8722885403333098"
+
+          crossOrigin="anonymous"
+
+        ></script>
 
       </Head>
 

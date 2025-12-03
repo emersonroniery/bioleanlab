@@ -30,9 +30,9 @@ export default function GoogleAdSense({
 
 }: Props) {
 
-  // Substitua pelo seu Publisher ID do AdSense
+  // Publisher ID do AdSense
 
-  const publisherId = "ca-pub-XXXXXXXXXXXXXXXX";
+  const publisherId = "ca-pub-8722885403333098";
 
 
 
@@ -40,19 +40,7 @@ export default function GoogleAdSense({
 
     <>
 
-      {/* AdSense Script - Adicione apenas uma vez no _app.tsx */}
-
-      <Script
-
-        async
-
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`}
-
-        crossOrigin="anonymous"
-
-        strategy="lazyOnload"
-
-      />
+      {/* AdSense Script já está no Layout.tsx - não precisa duplicar */}
 
 
 
