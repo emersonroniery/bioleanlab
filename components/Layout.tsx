@@ -38,6 +38,14 @@ export default function Layout({ children }: Props) {
 
         />
 
+        {/* Favicon */}
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
         {/* Google AdSense Script já está no _app.tsx */}
 
       </Head>
