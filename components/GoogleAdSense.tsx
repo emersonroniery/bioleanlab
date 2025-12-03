@@ -64,7 +64,7 @@ export default function GoogleAdSense({
 
         />
 
-        <Script id={`adsense-${adSlot}`} strategy="afterInteractive">
+        <Script id={`adsense-${adSlot}`} strategy="lazyOnload">
 
           {`(adsbygoogle = window.adsbygoogle || []).push({});`}
 
