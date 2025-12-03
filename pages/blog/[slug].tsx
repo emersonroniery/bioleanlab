@@ -60,11 +60,11 @@ export default function Post({ post }: Props) {
 
           <article className="lg:col-span-8">
 
-            <header className="mb-12 pb-8 border-b border-gray-200">
+            <header className="mb-12 pb-10 border-b border-gray-100">
 
-              <div className="mb-4">
+              <div className="mb-6">
 
-                <time className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+                <time className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
 
                   {formatDateLong(post.meta.date)}
 
@@ -72,13 +72,13 @@ export default function Post({ post }: Props) {
 
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 text-balance">
 
                 {post.meta.title}
 
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 text-balance">
 
                 {post.meta.description}
 
@@ -86,7 +86,7 @@ export default function Post({ post }: Props) {
 
               {post.meta.tags.length > 0 && (
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2.5">
 
                   {post.meta.tags.map((tag) => (
 
@@ -94,7 +94,7 @@ export default function Post({ post }: Props) {
 
                       key={tag}
 
-                      className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-200"
+                      className="px-4 py-2 bg-emerald-50 text-emerald-700 text-sm font-semibold rounded-full border border-emerald-200 shadow-sm"
 
                     >
 

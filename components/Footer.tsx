@@ -8,27 +8,43 @@ export default function Footer() {
 
   return (
 
-    <footer className="border-t border-gray-200 bg-white mt-20">
+    <footer className="border-t border-gray-100 bg-white mt-24">
 
-      <div className="max-w-6xl mx-auto py-10 px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-6 lg:px-8">
 
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
 
-          <div>
+          <div className="space-y-3">
 
-            <p className="text-sm text-gray-600 font-medium mb-1">
+            <div className="flex items-center gap-2.5 mb-2">
+
+              <div className="w-6 h-6 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
+
+                <span className="text-white font-black text-sm">B</span>
+
+              </div>
+
+              <span className="text-lg font-bold text-gray-900">
+
+                BioLean<span className="text-emerald-600">Lab</span>
+
+              </span>
+
+            </div>
+
+            <p className="text-sm text-gray-600 font-medium">
 
               © {new Date().getFullYear()} BioLeanLab. All rights reserved.
 
             </p>
 
-            <p className="text-xs text-gray-500 mb-2">
+            <p className="text-sm text-gray-500 leading-relaxed max-w-md">
 
-              Science-based weight loss and supplement insights.
+              Science-based weight loss and supplement insights to help you make informed health decisions.
 
             </p>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 pt-2">
 
               Some links are affiliate links. We may earn a commission at no extra cost to you.
 
@@ -36,43 +52,99 @@ export default function Footer() {
 
           </div>
 
-          <div className="flex flex-wrap gap-6 text-sm">
+          <div className="flex flex-col sm:flex-row gap-8 lg:gap-12">
 
-            <Link 
+            <div>
 
-              href="/privacy-policy" 
+              <h4 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">Legal</h4>
 
-              className="text-gray-600 hover:text-emerald-600 transition-colors"
+              <div className="flex flex-col gap-3">
 
-            >
+                <Link 
 
-              Privacy Policy
+                  href="/privacy-policy" 
 
-            </Link>
+                  className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
 
-            <Link 
+                >
 
-              href="/terms-of-use" 
+                  Privacy Policy
 
-              className="text-gray-600 hover:text-emerald-600 transition-colors"
+                </Link>
 
-            >
+                <Link 
 
-              Terms of Use
+                  href="/terms-of-use" 
 
-            </Link>
+                  className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
 
-            <Link 
+                >
 
-              href="/contact" 
+                  Terms of Use
 
-              className="text-gray-600 hover:text-emerald-600 transition-colors"
+                </Link>
 
-            >
+                <Link 
 
-              Contact
+                  href="/contact" 
 
-            </Link>
+                  className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
+
+                >
+
+                  Contact
+
+                </Link>
+
+              </div>
+
+            </div>
+
+            <div>
+
+              <h4 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">Content</h4>
+
+              <div className="flex flex-col gap-3">
+
+                <Link 
+
+                  href="/blog" 
+
+                  className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
+
+                >
+
+                  Blog
+
+                </Link>
+
+                <Link 
+
+                  href="/reviews" 
+
+                  className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
+
+                >
+
+                  Reviews
+
+                </Link>
+
+                <Link 
+
+                  href="/about" 
+
+                  className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
+
+                >
+
+                  About
+
+                </Link>
+
+              </div>
+
+            </div>
 
           </div>
 
