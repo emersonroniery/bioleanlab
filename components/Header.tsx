@@ -14,11 +14,11 @@ export default function Header() {
 
   return (
 
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur shadow-sm">
 
       <nav className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
 
-        <Link href="/" className="text-xl font-semibold text-slate-900 hover:text-emerald-600 transition-colors duration-200">
+        <Link href="/" className="text-2xl font-semibold text-slate-900 hover:text-emerald-600 transition-colors duration-200 tracking-tight">
 
           <span>BioLean</span><span className="text-emerald-600">Lab</span>
 
@@ -28,13 +28,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
-
-          <Link href="/" className="hover:text-emerald-600 transition-colors duration-200">
-
-            Home
-
-          </Link>
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
 
           <Link href="/blog" className="hover:text-emerald-600 transition-colors duration-200">
 
@@ -42,11 +36,15 @@ export default function Header() {
 
           </Link>
 
+          <span className="text-slate-300">|</span>
+
           <Link href="/reviews" className="hover:text-emerald-600 transition-colors duration-200">
 
             Reviews
 
           </Link>
+
+          <span className="text-slate-300">|</span>
 
           <Link href="/about" className="hover:text-emerald-600 transition-colors duration-200">
 

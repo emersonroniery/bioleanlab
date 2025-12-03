@@ -48,9 +48,9 @@ export default function Home({ latestPosts }: Props) {
 
       <section className="bg-white border-b border-slate-200">
 
-        <div className="max-w-6xl mx-auto py-12 sm:py-16 px-4 text-center">
+        <div className="max-w-xl mx-auto py-16 px-4 text-center">
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
 
             Smarter Weight Loss
 
@@ -58,7 +58,7 @@ export default function Home({ latestPosts }: Props) {
 
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-xl mx-auto mt-3 leading-relaxed">
 
             Evidence-informed guides, honest supplement reviews, and practical habits 
 
@@ -70,7 +70,7 @@ export default function Home({ latestPosts }: Props) {
 
             href="/blog"
 
-            className="inline-block px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors duration-200 shadow-sm hover:shadow-md"
+            className="inline-block mt-6 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors duration-200 shadow-md"
 
           >
 
@@ -86,11 +86,11 @@ export default function Home({ latestPosts }: Props) {
 
       {/* Latest Articles Section */}
 
-      <section className="max-w-6xl mx-auto py-10 sm:py-12 px-4">
+      <section className="max-w-6xl mx-auto py-12 px-4">
 
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Latest Articles</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight">Latest Articles</h2>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
 
           {latestPosts.map((post) => (
 
