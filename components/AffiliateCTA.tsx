@@ -54,15 +54,15 @@ export default function AffiliateCTA({
 
   return (
 
-    <div className="my-8 p-6 bg-gradient-to-r from-emerald-50 to-white border-2 border-emerald-200 rounded-xl shadow-lg">
+    <div className="my-10 p-5 bg-white border border-emerald-200 rounded-lg shadow-sm">
 
       <div className="flex items-start gap-4">
 
         <div className="flex-shrink-0">
 
-          <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center border border-emerald-200">
 
-            <span className="text-white font-bold text-xl">✓</span>
+            <span className="text-emerald-600 font-bold text-lg">✓</span>
 
           </div>
 
@@ -72,7 +72,7 @@ export default function AffiliateCTA({
 
           <div className="mb-2">
 
-            <span className="inline-block px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded mb-2">
+            <span className="inline-block px-2 py-0.5 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded border border-emerald-200">
 
               Recommended
 
@@ -80,7 +80,7 @@ export default function AffiliateCTA({
 
           </div>
 
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">
 
             {finalProductName}
 
@@ -100,7 +100,7 @@ export default function AffiliateCTA({
 
             rel="noopener noreferrer sponsored"
 
-            className="inline-block px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg"
+            className="inline-block px-5 py-2.5 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors text-sm shadow-sm hover:shadow-md"
 
           >
 

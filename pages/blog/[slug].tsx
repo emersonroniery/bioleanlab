@@ -52,19 +52,19 @@ export default function Post({ post }: Props) {
 
 
 
-      <div className="max-w-7xl mx-auto py-12 px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10">
 
           {/* Main Content */}
 
           <article className="lg:col-span-8">
 
-            <header className="mb-12 pb-10 border-b border-gray-100">
+            <header className="mb-8 pb-8 border-b border-gray-200">
 
-              <div className="mb-6">
+              <div className="mb-4">
 
-                <time className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                <time className="text-xs font-medium text-gray-500 uppercase tracking-wide">
 
                   {formatDateLong(post.meta.date)}
 
@@ -72,13 +72,13 @@ export default function Post({ post }: Props) {
 
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 text-balance">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
 
                 {post.meta.title}
 
               </h1>
 
-              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 text-balance">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6">
 
                 {post.meta.description}
 
@@ -86,7 +86,7 @@ export default function Post({ post }: Props) {
 
               {post.meta.tags.length > 0 && (
 
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2">
 
                   {post.meta.tags.map((tag) => (
 
@@ -94,7 +94,7 @@ export default function Post({ post }: Props) {
 
                       key={tag}
 
-                      className="px-4 py-2 bg-emerald-50 text-emerald-700 text-sm font-semibold rounded-full border border-emerald-200 shadow-sm"
+                      className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded border border-emerald-200"
 
                     >
 
@@ -128,7 +128,7 @@ export default function Post({ post }: Props) {
 
             <div
 
-              className="prose prose-lg prose-emerald max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:marker:text-emerald-600"
+              className="prose prose-base sm:prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-headings:mt-8 prose-headings:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4 prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-strong:font-semibold prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:marker:text-emerald-600 prose-li:my-2 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3"
 
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
 
@@ -156,7 +156,7 @@ export default function Post({ post }: Props) {
 
           <aside className="lg:col-span-4">
 
-            <div className="sticky top-24">
+            <div className="sticky top-20">
 
               <Sidebar />
 

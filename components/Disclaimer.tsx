@@ -4,7 +4,7 @@ export default function Disclaimer() {
 
   return (
 
-    <div className="my-8 p-6 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+    <div className="my-8 p-4 bg-amber-50 border border-amber-200 rounded-lg">
 
       <div className="flex items-start gap-3">
 
@@ -12,7 +12,7 @@ export default function Disclaimer() {
 
           <svg
 
-            className="w-6 h-6 text-yellow-600"
+            className="w-5 h-5 text-amber-600 mt-0.5"
 
             fill="none"
 
@@ -40,9 +40,9 @@ export default function Disclaimer() {
 
         <div className="flex-1">
 
-          <h4 className="font-bold text-gray-900 mb-2">Disclaimer</h4>
+          <h4 className="font-semibold text-gray-900 mb-1.5 text-sm">Disclaimer</h4>
 
-          <p className="text-sm text-gray-700 leading-relaxed">
+          <p className="text-xs text-gray-700 leading-relaxed">
 
             This content is for informational purposes only and is not intended as medical advice. 
 

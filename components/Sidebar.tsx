@@ -20,21 +20,21 @@ export default function Sidebar() {
 
       {/* Recommended Products Section */}
 
-      <div className="bg-gradient-to-br from-emerald-50 to-white border border-emerald-200 rounded-xl p-6">
+      <div className="bg-white border border-gray-200 rounded-lg p-5">
 
-        <h3 className="text-lg font-bold text-gray-900 mb-4">
+        <h3 className="text-base font-bold text-gray-900 mb-3">
 
           Recommended Products
 
         </h3>
 
-        <p className="text-sm text-gray-600 mb-4">
+        <p className="text-xs text-gray-600 mb-4">
 
           Products we've researched and reviewed:
 
         </p>
 
-        <div className="space-y-3">
+        <div className="space-y-2.5">
 
           <a
 
@@ -44,7 +44,7 @@ export default function Sidebar() {
 
             rel="noopener noreferrer"
 
-            className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all group"
+            className="block p-3 bg-gray-50 border border-gray-200 rounded-lg hover:border-emerald-300 hover:bg-emerald-50 transition-all group"
 
           >
 
@@ -52,15 +52,15 @@ export default function Sidebar() {
 
               <div className="flex-1">
 
-                <div className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-emerald-600 transition-colors">
+                <div className="font-semibold text-gray-900 text-xs mb-1 group-hover:text-emerald-600 transition-colors">
 
                   {affiliateLinks.metabolismSupplement.name}
 
                 </div>
 
-                <div className="text-xs text-gray-600">
+                <div className="text-xs text-gray-500">
 
-                  Click to learn more →
+                  Learn more →
 
                 </div>
 
@@ -68,7 +68,7 @@ export default function Sidebar() {
 
               <div className="flex-shrink-0">
 
-                <span className="inline-block px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded">
+                <span className="inline-block px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200">
 
                   Top Pick
 
@@ -82,8 +82,6 @@ export default function Sidebar() {
 
 
 
-          {/* Adicione mais produtos aqui seguindo o mesmo padrão */}
-
           <a
 
             href={affiliateLinks.fatLossGuide.url}
@@ -92,19 +90,19 @@ export default function Sidebar() {
 
             rel="noopener noreferrer"
 
-            className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all group"
+            className="block p-3 bg-gray-50 border border-gray-200 rounded-lg hover:border-emerald-300 hover:bg-emerald-50 transition-all group"
 
           >
 
-            <div className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-emerald-600 transition-colors">
+            <div className="font-semibold text-gray-900 text-xs mb-1 group-hover:text-emerald-600 transition-colors">
 
               {affiliateLinks.fatLossGuide.name}
 
             </div>
 
-            <div className="text-xs text-gray-600">
+            <div className="text-xs text-gray-500">
 
-              Click to learn more →
+              Learn more →
 
             </div>
 
@@ -124,21 +122,21 @@ export default function Sidebar() {
 
       {/* Newsletter Signup (Optional) */}
 
-      <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+      <div className="bg-white border border-gray-200 rounded-lg p-5">
 
-        <h3 className="text-lg font-bold text-gray-900 mb-2">
+        <h3 className="text-base font-bold text-gray-900 mb-2">
 
           Stay Updated
 
         </h3>
 
-        <p className="text-sm text-gray-600 mb-4">
+        <p className="text-xs text-gray-600 mb-4">
 
           Get the latest science-based insights delivered to your inbox.
 
         </p>
 
-        <form className="space-y-3">
+        <form className="space-y-2.5">
 
           <input
 
@@ -146,7 +144,7 @@ export default function Sidebar() {
 
             placeholder="Your email"
 
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
 
           />
 
@@ -154,7 +152,7 @@ export default function Sidebar() {
 
             type="submit"
 
-            className="w-full px-4 py-2 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors text-sm"
+            className="w-full px-3 py-2 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors text-sm"
 
           >
 

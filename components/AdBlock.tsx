@@ -26,27 +26,25 @@ export default function AdBlock({ slot, className = "" }: Props) {
 
   return (
 
-    <div className={`my-8 w-full ${className}`}>
+    <div className={`my-6 w-full ${className}`}>
 
-      <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 bg-gray-50 text-center">
+      <div className="border border-dashed border-gray-300 rounded-lg p-6 bg-gray-50 text-center">
 
-        <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+        <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
 
-          Advertisement Placeholder
-
-        </div>
-
-        <div className="text-sm text-gray-400 mb-2">
-
-          Ad space {slot ? `(${slot})` : ""}
+          Advertisement
 
         </div>
 
-        <div className="mt-4 text-xs text-gray-500 space-y-1">
+        <div className="text-xs text-gray-400 mb-2">
 
-          <div>📋 Veja ADSENSE_SETUP.md para instruções</div>
+          {slot ? `Slot: ${slot}` : "Ad space"}
 
-          <div>💡 Substitua por: &lt;GoogleAdSense adSlot="..." /&gt;</div>
+        </div>
+
+        <div className="mt-3 text-xs text-gray-500">
+
+          See ADSENSE_SETUP.md for instructions
 
         </div>
 

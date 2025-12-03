@@ -43,13 +43,12 @@ export default function Blog({ posts }: Props) {
 
 
       {/* Header Section */}
-      <section className="relative bg-white border-b border-gray-100">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-white to-emerald-50/20"></div>
-        <div className="relative max-w-7xl mx-auto py-16 sm:py-20 px-6 lg:px-8">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-5">
+      <section className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-3">
             Our Blog
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed">
             Science-based articles about weight loss, metabolism, and supplements 
             to help you make informed health decisions.
           </p>
@@ -57,9 +56,9 @@ export default function Blog({ posts }: Props) {
       </section>
 
       {/* Posts Grid */}
-      <section className="bg-gray-50/30 py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <section className="bg-gray-50 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
