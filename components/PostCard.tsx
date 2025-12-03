@@ -11,9 +11,9 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
   return (
 
-    <article className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col h-full">
+    <article className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full">
 
-      <time className="text-xs text-slate-400 mb-3 block">
+      <time className="text-[0.75rem] text-slate-400 mb-3 block">
 
         {new Date(post.date).toLocaleDateString("en-US", {
 

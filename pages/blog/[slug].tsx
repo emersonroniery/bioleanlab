@@ -44,7 +44,7 @@ export default function Post({ post }: Props) {
 
 
 
-      <div className="max-w-3xl mx-auto py-12 px-4">
+      <div className="max-w-3xl mx-auto py-14 md:py-16 px-4">
 
         <article className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-sm">
 

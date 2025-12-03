@@ -48,7 +48,7 @@ export default function Home({ latestPosts }: Props) {
 
       <section className="bg-white border-b border-slate-200">
 
-        <div className="max-w-xl mx-auto py-16 px-4 text-center">
+        <div className="max-w-2xl mx-auto py-14 md:py-20 px-4 text-center">
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
 
@@ -58,7 +58,7 @@ export default function Home({ latestPosts }: Props) {
 
           </h1>
 
-          <p className="text-lg text-slate-600 max-w-xl mx-auto mt-3 leading-relaxed">
+          <p className="text-[1.05rem] text-slate-600 max-w-2xl mx-auto mt-3 leading-relaxed">
 
             Evidence-informed guides, honest supplement reviews, and practical habits 
 
@@ -70,7 +70,7 @@ export default function Home({ latestPosts }: Props) {
 
             href="/blog"
 
-            className="inline-block mt-6 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors duration-200 shadow-md"
+            className="inline-block mt-6 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
 
           >
 
@@ -86,7 +86,7 @@ export default function Home({ latestPosts }: Props) {
 
       {/* Latest Articles Section */}
 
-      <section className="max-w-6xl mx-auto py-12 px-4">
+      <section className="max-w-6xl mx-auto py-16 px-4">
 
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight">Latest Articles</h2>
 

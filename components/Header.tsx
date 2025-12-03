@@ -16,7 +16,7 @@ export default function Header() {
 
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur shadow-sm">
 
-      <nav className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between py-5 px-4">
 
         <Link href="/" className="text-2xl font-semibold text-slate-900 hover:text-emerald-600 transition-colors duration-200 tracking-tight">
 

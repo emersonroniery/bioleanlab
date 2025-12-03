@@ -42,7 +42,7 @@ export default function Blog({ posts }: Props) {
 
 
 
-      <div className="max-w-6xl mx-auto py-12 px-4">
+      <div className="max-w-6xl mx-auto py-16 px-4">
 
         <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight">All Articles</h1>
 
