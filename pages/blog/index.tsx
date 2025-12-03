@@ -42,11 +42,11 @@ export default function Blog({ posts }: Props) {
 
 
 
-      <div className="max-w-6xl mx-auto py-12 px-4">
+      <div className="max-w-6xl mx-auto py-10 sm:py-12 px-4">
 
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">All Articles</h1>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
 
           {posts.map((post) => (
 

@@ -28,9 +28,9 @@ export default function AdBlock({ slot, className = "" }: Props) {
 
     <div className={`my-8 w-full ${className}`}>
 
-      <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 bg-gray-50 text-center">
+      <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 bg-slate-50 text-center">
 
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-slate-500">
 
           Ad space {slot ? `(${slot})` : ""}
 

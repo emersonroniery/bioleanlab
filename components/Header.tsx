@@ -14,11 +14,11 @@ export default function Header() {
 
   return (
 
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm shadow-sm">
 
       <nav className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
 
-        <Link href="/" className="text-xl font-semibold text-gray-900 hover:text-emerald-600 transition-colors">
+        <Link href="/" className="text-xl font-semibold text-slate-900 hover:text-emerald-600 transition-colors duration-200">
 
           <span>BioLean</span><span className="text-emerald-600">Lab</span>
 
@@ -28,27 +28,27 @@ export default function Header() {
 
         {/* Desktop Navigation */}
 
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
 
-          <Link href="/" className="hover:text-emerald-600 transition-colors">
+          <Link href="/" className="hover:text-emerald-600 transition-colors duration-200">
 
             Home
 
           </Link>
 
-          <Link href="/blog" className="hover:text-emerald-600 transition-colors">
+          <Link href="/blog" className="hover:text-emerald-600 transition-colors duration-200">
 
             Blog
 
           </Link>
 
-          <Link href="/reviews" className="hover:text-emerald-600 transition-colors">
+          <Link href="/reviews" className="hover:text-emerald-600 transition-colors duration-200">
 
             Reviews
 
           </Link>
 
-          <Link href="/about" className="hover:text-emerald-600 transition-colors">
+          <Link href="/about" className="hover:text-emerald-600 transition-colors duration-200">
 
             About
 
@@ -94,7 +94,7 @@ export default function Header() {
 
       {mobileMenuOpen && (
 
-        <div className="md:hidden border-t border-gray-200 bg-white">
+        <div className="md:hidden border-t border-slate-200 bg-white">
 
           <div className="px-4 py-3 space-y-1">
 
@@ -102,7 +102,7 @@ export default function Header() {
 
               href="/" 
 
-              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
+              className="block py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200"
 
               onClick={() => setMobileMenuOpen(false)}
 
@@ -116,7 +116,7 @@ export default function Header() {
 
               href="/blog" 
 
-              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
+              className="block py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200"
 
               onClick={() => setMobileMenuOpen(false)}
 
@@ -130,7 +130,7 @@ export default function Header() {
 
               href="/reviews" 
 
-              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
+              className="block py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200"
 
               onClick={() => setMobileMenuOpen(false)}
 
@@ -144,7 +144,7 @@ export default function Header() {
 
               href="/about" 
 
-              className="block py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors"
+              className="block py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200"
 
               onClick={() => setMobileMenuOpen(false)}
 

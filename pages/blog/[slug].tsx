@@ -44,17 +44,17 @@ export default function Post({ post }: Props) {
 
 
 
-      <div className="max-w-3xl mx-auto py-12 px-4">
+      <div className="max-w-3xl mx-auto py-10 sm:py-12 px-4">
 
-        <article>
+        <article className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-sm">
 
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
 
             {post.meta.title}
 
           </h1>
 
-          <time className="text-sm text-gray-500 block mb-8">
+          <time className="text-sm text-slate-500 block mb-8">
 
             {new Date(post.meta.date).toLocaleDateString("en-US", {
 
@@ -80,7 +80,7 @@ export default function Post({ post }: Props) {
 
           <div
 
-            className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline"
+            className="prose prose-lg max-w-none prose-headings:scroll-mt-24 prose-headings:font-bold prose-headings:text-slate-900 prose-headings:mt-8 prose-headings:mb-4 prose-p:text-slate-700 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-[0.95rem] prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-900 prose-strong:font-semibold prose-ul:text-slate-700 prose-ol:text-slate-700 prose-li:text-slate-700 prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3"
 
             dangerouslySetInnerHTML={{ __html: post.contentHtml }}
 
