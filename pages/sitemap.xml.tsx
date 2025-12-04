@@ -4,11 +4,16 @@ import { GetServerSideProps } from "next";
 
 import { getAllPosts } from "../lib/posts";
 
+import { getAllReviews } from "../lib/reviews";
+
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bioleanlab.com";
 
 
-function generateSitemap(posts: Array<{ slug: string; date: string }>) {
+function generateSitemap(
+  posts: Array<{ slug: string; date: string }>,
+  reviews: Array<{ slug: string; date: string }>
+) {
 
   const staticPages = [
 
@@ -16,7 +21,7 @@ function generateSitemap(posts: Array<{ slug: string; date: string }>) {
 
     { url: "/blog", priority: 0.9, changefreq: "daily" },
 
-    { url: "/reviews", priority: 0.8, changefreq: "weekly" },
+    { url: "/reviews", priority: 0.9, changefreq: "weekly" },
 
     { url: "/about", priority: 0.7, changefreq: "monthly" },
 
@@ -44,7 +49,20 @@ function generateSitemap(posts: Array<{ slug: string; date: string }>) {
   }));
 
 
-  const allPages = [...staticPages, ...postPages];
+  const reviewPages = reviews.map((review) => ({
+
+    url: `/reviews/${review.slug}`,
+
+    priority: 0.8,
+
+    changefreq: "weekly",
+
+    lastmod: new Date(review.date).toISOString(),
+
+  }));
+
+
+  const allPages = [...staticPages, ...postPages, ...reviewPages];
 
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -87,7 +105,12 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
   const posts = await getAllPosts();
 
-  const sitemap = generateSitemap(posts.map((p) => ({ slug: p.slug, date: p.date })));
+  const reviews = await getAllReviews();
+
+  const sitemap = generateSitemap(
+    posts.map((p) => ({ slug: p.slug, date: p.date })),
+    reviews.map((r) => ({ slug: r.slug, date: r.date }))
+  );
 
 
   res.setHeader("Content-Type", "text/xml");

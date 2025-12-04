@@ -3,6 +3,10 @@ title: "Ikaria Lean Belly Juice Review 2025: Ingredients, Pros, Cons, and What t
 description: "A science-informed, honest review of Ikaria Lean Belly Juice in 2025. Benefits, ingredients, pros, cons, who it's for, and whether it's worth it."
 date: "2025-01-08"
 tags: ["reviews", "supplements", "weight loss", "metabolism"]
+productName: "Ikaria Lean Belly Juice"
+rating: 4.5
+affiliateLink: "https://SEU-HOPLINK-AQUI"
+summary: "A comprehensive review of Ikaria Lean Belly Juice, analyzing its ingredients, effectiveness, and value for money."
 featured: true
 coverImage: "/images/covers/ikaria-review.jpg"
 ---

@@ -3,6 +3,10 @@ title: "Ikaria vs LeanBiome: Which One Is Better for Weight Loss in 2025?"
 description: "A clear, honest comparison of Ikaria Lean Belly Juice and LeanBiome — ingredients, benefits, pros, cons, and which supplement may be a better fit for you."
 date: "2025-01-08"
 tags: ["reviews", "comparisons", "supplements", "weight loss"]
+productName: "Ikaria vs LeanBiome"
+rating: 4.0
+affiliateLink: "https://SEU-HOPLINK-AQUI"
+summary: "A detailed comparison of two popular weight loss supplements, helping you choose the best option for your needs."
 featured: false
 coverImage: "/images/covers/ikaria-vs-leanbiome.jpg"
 ---
