@@ -32,6 +32,30 @@ const nextConfig: NextConfig = {
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
           },
+          {
+            key: "Accept-CH",
+            value: "DPR, Viewport-Width, Width",
+          },
+        ],
+      },
+      {
+        // Cache headers para HTML (páginas)
+        source: "/",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        // Cache headers para outras páginas HTML
+        source: "/:path",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+          },
         ],
       },
       {

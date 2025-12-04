@@ -59,49 +59,15 @@ export default function Home({ latestPosts }: Props) {
         <link rel="canonical" href={seo.canonical} />
 
 
-        {/* CSS Crítico Inline para Hero - Reduz LCP delay */}
+        {/* CSS Crítico Inline para Hero - Reduz LCP delay - Otimizado */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            .hero-section {
-              background-color: #ffffff;
-              border-bottom: 1px solid #e2e8f0;
-            }
-            .hero-container {
-              max-width: 56rem;
-              margin-left: auto;
-              margin-right: auto;
-              padding-top: 3rem;
-              padding-bottom: 3rem;
-              padding-left: 1rem;
-              padding-right: 1rem;
-              text-align: center;
-            }
-            .hero-title {
-              font-size: 2.25rem;
-              font-weight: 800;
-              color: #0f172a;
-              margin-bottom: 1.5rem;
-              line-height: 1.2;
-              letter-spacing: -0.025em;
-            }
-            .hero-subtitle {
-              margin-top: 1rem;
-              font-size: 1.05rem;
-              color: #475569;
-              max-width: 42rem;
-              margin-left: auto;
-              margin-right: auto;
-              line-height: 1.625;
-            }
-            @media (min-width: 768px) {
-              .hero-container {
-                padding-top: 5rem;
-                padding-bottom: 5rem;
-              }
-              .hero-title {
-                font-size: 3rem;
-              }
-            }
+            .hero-section{background:#fff;border-bottom:1px solid #e2e8f0}
+            .hero-container{max-width:56rem;margin:0 auto;padding:3rem 1rem;text-align:center}
+            .hero-title{font-size:2.25rem;font-weight:800;color:#0f172a;margin-bottom:1.5rem;line-height:1.2;letter-spacing:-.025em}
+            .hero-title span{display:block;margin-top:.5rem}
+            .hero-subtitle{margin-top:1rem;font-size:1.05rem;color:#475569;max-width:42rem;margin-left:auto;margin-right:auto;line-height:1.625}
+            @media (min-width:768px){.hero-container{padding:5rem 1rem}.hero-title{font-size:3rem}}
           `
         }} />
 
