@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Otimização de imagens - Otimizado para mobile
+  // Otimização de imagens - Balanceado para mobile e desktop
   images: {
     formats: ["image/avif", "image/webp"],
-    // Reduzido deviceSizes para mobile: removidos tamanhos muito grandes (2048, 3840)
-    // Mobile geralmente não precisa de imagens maiores que 1200px
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // Balanceado: inclui tamanhos para mobile e desktop (monitores grandes)
+    // Mobile: 640-1200px | Desktop: 1920-3840px (para monitores 4K)
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     // Otimizado imageSizes para reduzir variações desnecessárias
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 ano para imagens

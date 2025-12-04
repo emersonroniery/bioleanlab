@@ -2,21 +2,15 @@
 
 import Head from "next/head";
 
-import dynamic from "next/dynamic";
-
 import Header from "./Header";
+
+import Footer from "./Footer";
 
 import { ReactNode } from "react";
 
 
 
-// Lazy load Footer para reduzir JavaScript inicial
-
-const Footer = dynamic(() => import("./Footer"), {
-
-  loading: () => null, // Footer não precisa de loading state
-
-});
+// Footer carregado normalmente (não precisa de lazy loading para desktop)
 
 
 

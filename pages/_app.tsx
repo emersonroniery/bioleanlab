@@ -14,51 +14,81 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   const [shouldLoadAdSense, setShouldLoadAdSense] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
 
 
   useEffect(() => {
 
-    // Carrega AdSense apenas após 3 segundos ou quando o usuário interage
+    // Detecta se é mobile ou desktop
 
-    const timer = setTimeout(() => {
+    const checkMobile = () => {
 
-      setShouldLoadAdSense(true);
+      // Usa window.innerWidth para detectar mobile (mais confiável que userAgent)
 
-    }, 3000);
+      const isMobileDevice = window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+      setIsMobile(isMobileDevice);
 
-
-    // Carrega imediatamente se o usuário interagir (scroll, click, etc.)
-
-    const handleInteraction = () => {
-
-      setShouldLoadAdSense(true);
-
-      clearTimeout(timer);
+      return isMobileDevice;
 
     };
 
 
 
-    window.addEventListener("scroll", handleInteraction, { once: true, passive: true });
-
-    window.addEventListener("click", handleInteraction, { once: true });
-
-    window.addEventListener("touchstart", handleInteraction, { once: true, passive: true });
+    const mobile = checkMobile();
 
 
 
-    return () => {
+    if (mobile) {
 
-      clearTimeout(timer);
+      // MOBILE: Carrega AdSense após 2 segundos ou interação (otimizado para performance)
 
-      window.removeEventListener("scroll", handleInteraction);
+      const timer = setTimeout(() => {
 
-      window.removeEventListener("click", handleInteraction);
+        setShouldLoadAdSense(true);
 
-      window.removeEventListener("touchstart", handleInteraction);
+      }, 2000); // Reduzido para 2s no mobile
 
-    };
+
+
+      const handleInteraction = () => {
+
+        setShouldLoadAdSense(true);
+
+        clearTimeout(timer);
+
+      };
+
+
+
+      window.addEventListener("scroll", handleInteraction, { once: true, passive: true });
+
+      window.addEventListener("click", handleInteraction, { once: true });
+
+      window.addEventListener("touchstart", handleInteraction, { once: true, passive: true });
+
+
+
+      return () => {
+
+        clearTimeout(timer);
+
+        window.removeEventListener("scroll", handleInteraction);
+
+        window.removeEventListener("click", handleInteraction);
+
+        window.removeEventListener("touchstart", handleInteraction);
+
+      };
+
+    } else {
+
+      // DESKTOP: Carrega AdSense imediatamente (desktop tem mais recursos)
+
+      setShouldLoadAdSense(true);
+
+    }
 
   }, []);
 
@@ -68,7 +98,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
     <>
 
-      {/* Google AdSense Script - Carregado apenas quando necessário */}
+      {/* Google AdSense Script - Estratégia adaptativa: mobile delay, desktop imediato */}
 
       {shouldLoadAdSense && (
 
@@ -80,7 +110,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
           crossOrigin="anonymous"
 
-          strategy="lazyOnload"
+          strategy={isMobile ? "lazyOnload" : "afterInteractive"}
 
         />
 
