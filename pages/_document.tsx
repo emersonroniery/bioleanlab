@@ -12,10 +12,28 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         
-        {/* Carregar fonte com display=swap */}
+        {/* Carregar fonte de forma não-bloqueante */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="preload"
+          as="style"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
+          media="print"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap';
+                document.head.appendChild(link);
+              })();
+            `,
+          }}
         />
         
         {/* Meta tags básicas */}
@@ -35,4 +53,3 @@ export default function Document() {
     </Html>
   );
 }
-
