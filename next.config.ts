@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Configuração do compilador para reduzir JavaScript legado
+  compiler: {
+    // Remove console.log em produção (reduz tamanho)
+    removeConsole: process.env.NODE_ENV === "production" ? {
+      exclude: ["error", "warn"],
+    } : false,
+  },
+  // Experimental: Otimizações de bundle
+  experimental: {
+    // Otimiza imports de módulos grandes
+    optimizePackageImports: ["remark", "remark-html", "gray-matter"],
+  },
   // Otimização de imagens - Balanceado para mobile e desktop
   images: {
     formats: ["image/avif", "image/webp"],

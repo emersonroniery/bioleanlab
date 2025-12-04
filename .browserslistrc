@@ -1,14 +1,17 @@
 # Browserslist config para reduzir polyfills desnecessários
-# Foco em navegadores modernos (últimos 2 anos)
+# Foco em navegadores modernos que suportam ES2020 nativamente
 # Isso reduzirá JavaScript legado de 14 KiB para ~0 KiB
 
-# Navegadores modernos (últimos 2 anos)
+# Navegadores modernos com suporte ES2020 nativo
+# Chrome 92+, Firefox 90+, Safari 14.1+, Edge 92+
 > 0.5%
 last 2 versions
 Firefox ESR
 not dead
 not IE 11
+not op_mini all
 
-# Suporte mínimo: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-# Isso permite usar ES2020+ sem transpilação desnecessária
+# Suporte mínimo explícito para ES2020
+# Array.prototype.at, flat, flatMap, Object.fromEntries, Object.hasOwn
+# String.prototype.trimEnd, trimStart são suportados nativamente
 
