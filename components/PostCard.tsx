@@ -42,7 +42,7 @@ export default function PostCard({ post, priority }: { post: PostMeta; priority?
 
       )}
 
-      <time className="text-[0.75rem] text-slate-400 mb-1 block">
+      <time className="text-[0.75rem] text-slate-500 mb-1 block">
 
         {new Date(post.date).toLocaleDateString("en-US", {
 

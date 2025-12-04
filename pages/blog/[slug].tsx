@@ -177,7 +177,7 @@ export default function Post({ post }: Props) {
 
           </h1>
 
-          <time className="text-xs text-slate-400 block mb-6" dateTime={post.meta.date}>
+          <time className="text-xs text-slate-500 block mb-6" dateTime={post.meta.date}>
 
             {new Date(post.meta.date).toLocaleDateString("en-US", {
 
