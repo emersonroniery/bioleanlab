@@ -56,13 +56,25 @@ export default function Reviews() {
 
           </p>
 
-          <p>
+          <p className="mb-4">
 
             Our goal is simple: help you make informed decisions about which supplements might be right for you, 
 
             without the marketing fluff. Check back regularly for new reviews, or browse our blog for detailed articles 
 
             about specific supplements and their effects on metabolism and weight loss.
+
+          </p>
+
+          <p>
+
+            For more details about our review methodology, editorial standards, and affiliate disclosure, please read our{" "}
+
+            <Link href="/reviews-policy" className="text-emerald-600 hover:text-emerald-700 underline">
+
+              Reviews Policy
+
+            </Link>.
 
           </p>
 
@@ -75,4 +87,3 @@ export default function Reviews() {
   );
 
 }
-
