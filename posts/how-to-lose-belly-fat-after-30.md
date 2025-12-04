@@ -29,7 +29,9 @@ Good sources include:
 - chicken, turkey, fish  
 - eggs and egg whites  
 - Greek yogurt and cottage cheese  
-- tofu, tempeh, lentils and beans  
+- tofu, tempeh, lentils and beans
+
+For a complete guide on structuring high-protein meals, read our [beginner's guide to high-protein diets for fat loss](/blog/high-protein-diet-beginners-guide).  
 
 ## 3. Combine strength training + walking
 
@@ -48,7 +50,9 @@ Practical steps:
 
 - aim for 7–9 hours of sleep when possible  
 - avoid heavy screens and caffeine late at night  
-- use short breathing or mindfulness exercises during stressful days  
+- use short breathing or mindfulness exercises during stressful days
+
+Your evening routine plays a crucial role in sleep quality and weight management. Learn more about [evening habits that support better weight management](/blog/evening-habits-weight-management).  
 
 ## 5. Alcohol and liquid calories
 

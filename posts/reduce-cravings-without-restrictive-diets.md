@@ -28,7 +28,9 @@ Examples:
 
 - Greek yogurt + berries  
 
-- protein oatmeal  
+- protein oatmeal
+
+For a complete guide on structuring a high-protein diet, check out our [beginner's guide to high-protein eating for fat loss](/blog/high-protein-diet-beginners-guide).  
 
 ---
 
@@ -88,4 +90,12 @@ https://SEU-LINK-AFILIADO-CLICKBANK-AQUI
 
 Cravings can be managed — not eliminated.  
 With a combination of protein, hydration, sleep and mindful eating, you can stay consistent without strict diets.
+
+---
+
+### You may also like
+
+- [Evening Habits That Support Better Weight Management](/blog/evening-habits-weight-management)
+- [High-Protein Diet for Fat Loss: A Complete Beginner's Guide](/blog/high-protein-diet-beginners-guide)
+- [Why You're Not Losing Weight Even in a Calorie Deficit: Science Explained](/blog/why-you-cant-lose-weight-deficit)
 
