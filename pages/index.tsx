@@ -12,6 +12,8 @@ import PostCard from "../components/PostCard";
 
 import Link from "next/link";
 
+import { generateSEOTags, generateWebsiteJSONLD } from "../lib/seo";
+
 
 
 type Props = {
@@ -22,7 +24,27 @@ type Props = {
 
 
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bioleanlab.com";
+
+
+
 export default function Home({ latestPosts }: Props) {
+
+  const seo = generateSEOTags({
+
+    title: "Science-Based Weight Loss & Supplements",
+
+    description: "BioLeanLab brings evidence-informed content on weight loss, metabolism and supplements for people who want sustainable results.",
+
+    canonical: SITE_URL,
+
+    ogType: "website",
+
+  });
+
+
+  const websiteJSONLD = generateWebsiteJSONLD();
+
 
   return (
 
@@ -30,13 +52,55 @@ export default function Home({ latestPosts }: Props) {
 
       <Head>
 
-        <title>BioLeanLab – Science-Based Weight Loss & Supplements</title>
+        <title>{seo.title}</title>
 
-        <meta
+        <meta name="description" content={seo.description} />
 
-          name="description"
+        <link rel="canonical" href={seo.canonical} />
 
-          content="BioLeanLab brings evidence-informed content on weight loss, metabolism and supplements for people who want sustainable results."
+
+        {/* Open Graph */}
+
+        <meta property="og:title" content={seo.openGraph.title} />
+
+        <meta property="og:description" content={seo.openGraph.description} />
+
+        <meta property="og:url" content={seo.openGraph.url} />
+
+        <meta property="og:site_name" content={seo.openGraph.siteName} />
+
+        <meta property="og:image" content={seo.openGraph.images[0].url} />
+
+        <meta property="og:image:width" content={String(seo.openGraph.images[0].width)} />
+
+        <meta property="og:image:height" content={String(seo.openGraph.images[0].height)} />
+
+        <meta property="og:type" content={seo.openGraph.type} />
+
+
+        {/* Twitter Card */}
+
+        <meta name="twitter:card" content={seo.twitter.card} />
+
+        <meta name="twitter:title" content={seo.twitter.title} />
+
+        <meta name="twitter:description" content={seo.twitter.description} />
+
+        <meta name="twitter:image" content={seo.twitter.images[0]} />
+
+
+        {/* Robots */}
+
+        <meta name="robots" content={seo.robots.index ? "index, follow" : "noindex, nofollow"} />
+
+
+        {/* JSON-LD */}
+
+        <script
+
+          type="application/ld+json"
+
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJSONLD) }}
 
         />
 
@@ -137,4 +201,3 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 
 };
-

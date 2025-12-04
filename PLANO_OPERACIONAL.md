@@ -97,3 +97,4 @@ git push
 - Seção "You may also like" adicionada ao final de cada artigo
 - Código já suporta `coverImage` - só falta criar/adicionar as imagens
 
+

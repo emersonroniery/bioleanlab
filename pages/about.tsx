@@ -4,9 +4,28 @@ import Head from "next/head";
 
 import Layout from "../components/Layout";
 
+import { generateSEOTags } from "../lib/seo";
+
+
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bioleanlab.com";
+
 
 
 export default function About() {
+
+  const seo = generateSEOTags({
+
+    title: "About",
+
+    description: "Learn more about BioLeanLab and our mission to provide science-based weight loss and supplement information.",
+
+    canonical: `${SITE_URL}/about`,
+
+    ogType: "website",
+
+  });
+
 
   return (
 
@@ -14,15 +33,26 @@ export default function About() {
 
       <Head>
 
-        <title>About – BioLeanLab</title>
+        <title>{seo.title}</title>
 
-        <meta
+        <meta name="description" content={seo.description} />
 
-          name="description"
+        <link rel="canonical" href={seo.canonical} />
 
-          content="Learn more about BioLeanLab and our mission to provide science-based weight loss and supplement information."
 
-        />
+        {/* Open Graph */}
+
+        <meta property="og:title" content={seo.openGraph.title} />
+
+        <meta property="og:description" content={seo.openGraph.description} />
+
+        <meta property="og:url" content={seo.openGraph.url} />
+
+        <meta property="og:site_name" content={seo.openGraph.siteName} />
+
+        <meta property="og:image" content={seo.openGraph.images[0].url} />
+
+        <meta property="og:type" content={seo.openGraph.type} />
 
       </Head>
 
@@ -73,4 +103,3 @@ export default function About() {
   );
 
 }
-

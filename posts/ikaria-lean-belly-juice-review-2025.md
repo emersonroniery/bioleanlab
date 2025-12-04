@@ -133,3 +133,4 @@ https://SEU-HOPLINK-AQUI
 - [Is Metabolic Slowdown Real? What Science Actually Says](/blog/is-metabolic-slowdown-real)
 - [Top 10 Metabolism-Boosting Foods Backed by Science](/blog/top-10-metabolism-boosting-foods)
 
+

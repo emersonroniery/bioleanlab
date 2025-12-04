@@ -4,9 +4,28 @@ import Head from "next/head";
 
 import Layout from "../components/Layout";
 
+import { generateSEOTags } from "../lib/seo";
+
+
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bioleanlab.com";
+
 
 
 export default function TermsOfUse() {
+
+  const seo = generateSEOTags({
+
+    title: "Terms of Use",
+
+    description: "Terms of Use for BioLeanLab. Read our terms and conditions for using our website.",
+
+    canonical: `${SITE_URL}/terms-of-use`,
+
+    ogType: "website",
+
+  });
+
 
   return (
 
@@ -14,17 +33,34 @@ export default function TermsOfUse() {
 
       <Head>
 
-        <title>Terms of Use – BioLeanLab</title>
+        <title>{seo.title}</title>
 
-        <meta name="description" content="Terms of Use for BioLeanLab" />
+        <meta name="description" content={seo.description} />
+
+        <link rel="canonical" href={seo.canonical} />
+
+
+        {/* Open Graph */}
+
+        <meta property="og:title" content={seo.openGraph.title} />
+
+        <meta property="og:description" content={seo.openGraph.description} />
+
+        <meta property="og:url" content={seo.openGraph.url} />
+
+        <meta property="og:site_name" content={seo.openGraph.siteName} />
+
+        <meta property="og:image" content={seo.openGraph.images[0].url} />
+
+        <meta property="og:type" content={seo.openGraph.type} />
 
       </Head>
 
 
 
-      <div className="max-w-3xl mx-auto py-12 px-4">
+      <div className="max-w-3xl mx-auto py-12 md:py-16 px-4">
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-6">
 
           Terms of Use
 
@@ -32,9 +68,9 @@ export default function TermsOfUse() {
 
 
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none prose-p:text-slate-700 prose-p:leading-relaxed prose-headings:text-slate-900">
 
-          <p className="text-gray-600 mb-6">
+          <p className="text-slate-600 mb-6">
 
             Last updated: {new Date().toLocaleDateString("en-US", {
 
@@ -126,7 +162,9 @@ export default function TermsOfUse() {
 
           <p>
 
-            If you have questions about these Terms of Use, please contact us through our contact page.
+            If you have questions about these Terms of Use, please contact us through our{" "}
+
+            <a href="/contact" className="text-emerald-600 hover:text-emerald-700 underline">contact page</a>.
 
           </p>
 
@@ -139,4 +177,3 @@ export default function TermsOfUse() {
   );
 
 }
-

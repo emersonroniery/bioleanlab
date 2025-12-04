@@ -20,27 +20,37 @@ export default function Footer() {
 
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-slate-600">
+          <nav aria-label="Footer navigation">
 
-            <Link href="/privacy-policy" className="hover:text-emerald-600 transition-colors duration-200">
+            <div className="flex flex-wrap gap-4 text-sm text-slate-600">
 
-              Privacy Policy
+              <Link href="/reviews-policy" className="hover:text-emerald-600 transition-colors duration-200">
 
-            </Link>
+                Reviews Policy
 
-            <Link href="/terms-of-use" className="hover:text-emerald-600 transition-colors duration-200">
+              </Link>
 
-              Terms of Use
+              <Link href="/privacy-policy" className="hover:text-emerald-600 transition-colors duration-200">
 
-            </Link>
+                Privacy Policy
 
-            <Link href="/contact" className="hover:text-emerald-600 transition-colors duration-200">
+              </Link>
 
-              Contact
+              <Link href="/terms-of-use" className="hover:text-emerald-600 transition-colors duration-200">
 
-            </Link>
+                Terms of Use
 
-          </div>
+              </Link>
+
+              <Link href="/contact" className="hover:text-emerald-600 transition-colors duration-200">
+
+                Contact
+
+              </Link>
+
+            </div>
+
+          </nav>
 
         </div>
 
@@ -51,4 +61,3 @@ export default function Footer() {
   );
 
 }
-

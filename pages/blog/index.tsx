@@ -10,6 +10,8 @@ import { getAllPosts, PostMeta } from "../../lib/posts";
 
 import PostCard from "../../components/PostCard";
 
+import { generateSEOTags } from "../../lib/seo";
+
 
 
 type Props = {
@@ -20,7 +22,24 @@ type Props = {
 
 
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bioleanlab.com";
+
+
+
 export default function Blog({ posts }: Props) {
+
+  const seo = generateSEOTags({
+
+    title: "Blog",
+
+    description: "All articles about weight loss, metabolism, and supplements from BioLeanLab.",
+
+    canonical: `${SITE_URL}/blog`,
+
+    ogType: "website",
+
+  });
+
 
   return (
 
@@ -28,15 +47,37 @@ export default function Blog({ posts }: Props) {
 
       <Head>
 
-        <title>Blog – BioLeanLab</title>
+        <title>{seo.title}</title>
 
-        <meta
+        <meta name="description" content={seo.description} />
 
-          name="description"
+        <link rel="canonical" href={seo.canonical} />
 
-          content="All articles about weight loss, metabolism, and supplements from BioLeanLab."
 
-        />
+        {/* Open Graph */}
+
+        <meta property="og:title" content={seo.openGraph.title} />
+
+        <meta property="og:description" content={seo.openGraph.description} />
+
+        <meta property="og:url" content={seo.openGraph.url} />
+
+        <meta property="og:site_name" content={seo.openGraph.siteName} />
+
+        <meta property="og:image" content={seo.openGraph.images[0].url} />
+
+        <meta property="og:type" content={seo.openGraph.type} />
+
+
+        {/* Twitter Card */}
+
+        <meta name="twitter:card" content={seo.twitter.card} />
+
+        <meta name="twitter:title" content={seo.twitter.title} />
+
+        <meta name="twitter:description" content={seo.twitter.description} />
+
+        <meta name="twitter:image" content={seo.twitter.images[0]} />
 
       </Head>
 
@@ -127,4 +168,3 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 
 };
-

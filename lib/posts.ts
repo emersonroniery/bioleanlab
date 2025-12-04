@@ -10,6 +10,8 @@ import { remark } from "remark";
 
 import html from "remark-html";
 
+import { processExternalLinks } from "./htmlUtils";
+
 
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -60,7 +62,11 @@ export async function getPostBySlug(slug: string) {
 
   const processedContent = await remark().use(html).process(content);
 
-  const contentHtml = processedContent.toString();
+  let contentHtml = processedContent.toString();
+
+  // Processa links externos para adicionar rel="noopener noreferrer"
+
+  contentHtml = processExternalLinks(contentHtml);
 
 
 

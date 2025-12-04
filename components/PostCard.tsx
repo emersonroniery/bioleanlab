@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 
-import { PostMeta } from "../lib/posts";
+import Image from "next/image";
 
+import { PostMeta } from "../lib/posts";
 
 
 
@@ -15,15 +16,23 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
       {post.coverImage && post.coverImage !== null && (
 
-        <div className="mb-4 overflow-hidden rounded-xl bg-slate-100">
+        <div className="mb-4 overflow-hidden rounded-xl bg-slate-100 relative h-40 w-full">
 
-          <img
+          <Image
 
             src={post.coverImage}
 
             alt={post.title}
 
-            className="h-40 w-full object-cover"
+            width={800}
+
+            height={400}
+
+            className="object-cover"
+
+            loading="lazy"
+
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
           />
 
@@ -78,4 +87,3 @@ export default function PostCard({ post }: { post: PostMeta }) {
   );
 
 }
-
