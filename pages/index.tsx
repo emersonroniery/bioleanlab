@@ -59,6 +59,53 @@ export default function Home({ latestPosts }: Props) {
         <link rel="canonical" href={seo.canonical} />
 
 
+        {/* CSS Crítico Inline para Hero - Reduz LCP delay */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .hero-section {
+              background-color: #ffffff;
+              border-bottom: 1px solid #e2e8f0;
+            }
+            .hero-container {
+              max-width: 56rem;
+              margin-left: auto;
+              margin-right: auto;
+              padding-top: 3rem;
+              padding-bottom: 3rem;
+              padding-left: 1rem;
+              padding-right: 1rem;
+              text-align: center;
+            }
+            .hero-title {
+              font-size: 2.25rem;
+              font-weight: 800;
+              color: #0f172a;
+              margin-bottom: 1.5rem;
+              line-height: 1.2;
+              letter-spacing: -0.025em;
+            }
+            .hero-subtitle {
+              margin-top: 1rem;
+              font-size: 1.05rem;
+              color: #475569;
+              max-width: 42rem;
+              margin-left: auto;
+              margin-right: auto;
+              line-height: 1.625;
+            }
+            @media (min-width: 768px) {
+              .hero-container {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+              }
+              .hero-title {
+                font-size: 3rem;
+              }
+            }
+          `
+        }} />
+
+
         {/* Open Graph */}
 
         <meta property="og:title" content={seo.openGraph.title} />
@@ -108,21 +155,21 @@ export default function Home({ latestPosts }: Props) {
 
 
 
-      {/* Hero Section */}
+      {/* Hero Section - Otimizado para LCP */}
 
-      <section className="bg-white border-b border-slate-200">
+      <section className="hero-section">
 
-        <div className="max-w-4xl mx-auto py-12 md:py-20 px-4 text-center">
+        <div className="hero-container">
 
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
+          <h1 className="hero-title">
 
             Smarter Weight Loss
 
-            <span className="block mt-2">Through Science.</span>
+            <span style={{ display: "block", marginTop: "0.5rem" }}>Through Science.</span>
 
           </h1>
 
-          <p className="mt-4 text-[1.05rem] text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="hero-subtitle">
 
             Evidence-informed guides, honest supplement reviews, and practical habits 
 

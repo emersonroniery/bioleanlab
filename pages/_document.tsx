@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         
-        {/* Carregar fonte de forma não-bloqueante */}
+        {/* Carregar fonte de forma não-bloqueante - Otimizado */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="preload"
@@ -23,10 +23,22 @@ export default function Document() {
           rel="stylesheet"
           media="print"
         />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
+                var links = document.querySelectorAll('link[media="print"]');
+                links.forEach(function(link) {
+                  if (link.href.indexOf('fonts.googleapis.com') !== -1) {
+                    link.media = 'all';
+                  }
+                });
                 var link = document.createElement('link');
                 link.rel = 'stylesheet';
                 link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap';
