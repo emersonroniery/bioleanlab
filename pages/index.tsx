@@ -59,16 +59,9 @@ export default function Home({ latestPosts }: Props) {
         <link rel="canonical" href={seo.canonical} />
 
 
-        {/* CSS Crítico Inline para Hero - Reduz LCP delay - Otimizado */}
+        {/* CSS Crítico Inline para Hero - Reduz LCP delay - Ultra Otimizado para Mobile */}
         <style dangerouslySetInnerHTML={{
-          __html: `
-            .hero-section{background:#fff;border-bottom:1px solid #e2e8f0}
-            .hero-container{max-width:56rem;margin:0 auto;padding:3rem 1rem;text-align:center}
-            .hero-title{font-size:2.25rem;font-weight:800;color:#0f172a;margin-bottom:1.5rem;line-height:1.2;letter-spacing:-.025em}
-            .hero-title span{display:block;margin-top:.5rem}
-            .hero-subtitle{margin-top:1rem;font-size:1.05rem;color:#475569;max-width:42rem;margin-left:auto;margin-right:auto;line-height:1.625}
-            @media (min-width:768px){.hero-container{padding:5rem 1rem}.hero-title{font-size:3rem}}
-          `
+          __html: `.hero-section{background:#fff;border-bottom:1px solid #e2e8f0}.hero-container{max-width:56rem;margin:0 auto;padding:3rem 1rem;text-align:center}.hero-title{font-size:2.25rem;font-weight:800;color:#0f172a;margin-bottom:1.5rem;line-height:1.2;letter-spacing:-.025em}.hero-title span{display:block;margin-top:.5rem}.hero-subtitle{margin-top:1rem;font-size:1.05rem;color:#475569;max-width:42rem;margin:1rem auto 0;line-height:1.625}@media (min-width:768px){.hero-container{padding:5rem 1rem}.hero-title{font-size:3rem}}`
         }} />
 
 
@@ -181,9 +174,9 @@ export default function Home({ latestPosts }: Props) {
 
         <div className="grid gap-8 md:grid-cols-3">
 
-          {latestPosts.map((post) => (
+          {latestPosts.map((post, index) => (
 
-            <PostCard key={post.slug} post={post} />
+            <PostCard key={post.slug} post={post} priority={index === 0} />
 
           ))}
 

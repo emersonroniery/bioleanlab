@@ -8,7 +8,7 @@ import { PostMeta } from "../lib/posts";
 
 
 
-export default function PostCard({ post }: { post: PostMeta }) {
+export default function PostCard({ post, priority }: { post: PostMeta; priority?: boolean }) {
 
   return (
 
@@ -30,7 +30,9 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
             className="object-cover"
 
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+
+            priority={priority || false}
 
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
