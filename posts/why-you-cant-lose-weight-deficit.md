@@ -1,7 +1,7 @@
 ---
 title: "Why You're Not Losing Weight Even in a Calorie Deficit: Science Explained"
 description: "If you're eating less and still not losing weight, several factors may be at play. Here is the science behind stalled fat loss."
-date: "2025-01-08"
+date: "2025-12-01"
 tags: ["weight loss", "science", "plateau", "metabolism"]
 featured: false
 ---

@@ -127,6 +127,14 @@ export default function Review({ review }: Props) {
           {/* Review Summary Box */}
           <ReviewSummaryBox review={review.meta} />
 
+          <div className="bg-gray-100 p-4 rounded-md mb-6 text-sm text-gray-600 border-l-4 border-blue-500">
+            <p>
+              <strong>Transparency Disclosure:</strong> This content is reader-supported.
+              When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+              We only recommend products based on scientific evidence and our rigorous analysis.
+            </p>
+          </div>
+
           {/* AdBlock Top */}
           <div className="my-6">
             <AdBlock slot="top-article" />

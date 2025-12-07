@@ -192,3 +192,5 @@ coverImage: "/images/covers/sleeplean-review.jpg"
 - [Guia de Links de Afiliado](./GUIA_LINKS_AFILIADO.md)
 - [Reviews Policy](/reviews-policy)
 
+
+

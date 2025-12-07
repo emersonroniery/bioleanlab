@@ -1,7 +1,7 @@
 ---
 title: "Is Metabolic Slowdown Real? What Science Actually Says"
 description: "Many people believe their metabolism 'slows down' with age or dieting. Here's what scientific research really shows about metabolic adaptation."
-date: "2025-01-08"
+date: "2025-12-01"
 tags: ["metabolism", "weight loss", "science", "research"]
 featured: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "High-Protein Diet for Fat Loss: A Complete Beginner's Guide"
 description: "A practical, science-based introduction to using a high-protein diet to support fat loss, muscle maintenance and appetite control."
-date: "2025-01-08"
+date: "2025-12-01"
 tags: ["nutrition", "protein", "weight loss", "guide"]
 featured: false
 ---

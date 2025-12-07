@@ -1,7 +1,7 @@
 ---
 title: "How to Lose Belly Fat After 30: A Realistic, Science-Informed Guide"
 description: "A practical approach to losing abdominal fat after 30 without extreme diets or unrealistic promises."
-date: "2025-01-06"
+date: "2025-12-01"
 tags: ["belly fat", "weight loss", "lifestyle"]
 featured: true
 ---

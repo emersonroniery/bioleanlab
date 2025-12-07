@@ -1,7 +1,7 @@
 ---
 title: "5 Proven Strategies to Reduce Cravings Without Restrictive Diets"
 description: "Cravings are normal, but they can disrupt progress. Here are practical, science-informed strategies to reduce cravings without extreme diets."
-date: "2025-01-08"
+date: "2025-12-01"
 tags: ["cravings", "nutrition", "habits", "weight loss"]
 featured: false
 ---

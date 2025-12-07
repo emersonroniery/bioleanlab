@@ -1,7 +1,7 @@
 ---
 title: "Evening Habits That Support Better Weight Management"
 description: "Your evening routine has a major influence on appetite, cravings, energy and weight regulation. Here are science-informed habits to improve your nights."
-date: "2025-01-08"
+date: "2025-12-01"
 tags: ["habits", "sleep", "weight loss", "lifestyle"]
 featured: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Top 10 Metabolism-Boosting Foods Backed by Science"
 description: "Discover which foods may help support a healthy metabolism and more sustainable weight loss."
-date: "2025-01-05"
+date: "2025-12-01"
 tags: ["metabolism", "weight loss", "nutrition"]
 featured: true
 ---

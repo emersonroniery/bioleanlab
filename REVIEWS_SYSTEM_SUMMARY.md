@@ -187,3 +187,5 @@ Atualmente, o sistema detecta **3 reviews**:
 - Sistema identifica automaticamente pelo frontmatter `tags`
 - Campos opcionais (`productName`, `rating`, `affiliateLink`) podem ser `null`
 
+
+

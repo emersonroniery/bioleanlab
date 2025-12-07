@@ -11,7 +11,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        
+
         {/* Carregar fonte de forma não-bloqueante - Otimizado */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -47,11 +47,11 @@ export default function Document() {
             `,
           }}
         />
-        
+
         {/* Meta tags básicas */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#10b981" />
-        
+
         {/* Content Security Policy */}
         <meta
           httpEquiv="Content-Security-Policy"

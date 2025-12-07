@@ -9,6 +9,7 @@ import { GetStaticProps } from "next";
 import { getAllPosts, PostMeta } from "../lib/posts";
 
 import PostCard from "../components/PostCard";
+import Hero from "../components/Hero";
 
 import Link from "next/link";
 
@@ -57,12 +58,6 @@ export default function Home({ latestPosts }: Props) {
         <meta name="description" content={seo.description} />
 
         <link rel="canonical" href={seo.canonical} />
-
-
-        {/* CSS Crítico Inline para Hero - Reduz LCP delay - Ultra Otimizado para Mobile */}
-        <style dangerouslySetInnerHTML={{
-          __html: `.hero-section{background:#fff;border-bottom:1px solid #e2e8f0}.hero-container{max-width:56rem;margin:0 auto;padding:3rem 1rem;text-align:center}.hero-title{font-size:2.25rem;font-weight:800;color:#0f172a;margin-bottom:1.5rem;line-height:1.2;letter-spacing:-.025em}.hero-title span{display:block;margin-top:.5rem}.hero-subtitle{margin-top:1rem;font-size:1.05rem;color:#475569;max-width:42rem;margin:1rem auto 0;line-height:1.625}@media (min-width:768px){.hero-container{padding:5rem 1rem}.hero-title{font-size:3rem}}`
-        }} />
 
 
         {/* Open Graph */}
@@ -115,48 +110,7 @@ export default function Home({ latestPosts }: Props) {
 
 
       {/* Hero Section - Otimizado para LCP */}
-
-      <section className="hero-section">
-
-        <div className="hero-container">
-
-          <h1 className="hero-title">
-
-            Smarter Weight Loss
-
-            <span style={{ display: "block", marginTop: "0.5rem" }}>Through Science.</span>
-
-          </h1>
-
-          <p className="hero-subtitle">
-
-            Evidence-informed guides, honest supplement reviews, and practical habits 
-
-            to help you make informed decisions about your health and metabolism.
-
-          </p>
-
-          <p className="text-xs uppercase tracking-wide text-emerald-700 mt-4">
-
-            Trusted, no-nonsense guidance for sustainable weight loss, metabolism support and honest supplement reviews.
-
-          </p>
-
-          <Link
-
-            href="/blog"
-
-            className="mt-8 inline-flex items-center justify-center px-7 py-3 rounded-lg bg-emerald-700 text-white font-semibold shadow-lg hover:bg-emerald-800 hover:shadow-xl transition-all duration-200"
-
-          >
-
-            Read Latest Articles
-
-          </Link>
-
-        </div>
-
-      </section>
+      <Hero />
 
 
 
