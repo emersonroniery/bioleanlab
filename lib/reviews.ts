@@ -23,6 +23,7 @@ export type ReviewMeta = {
   tags: string[];
   featured?: boolean;
   coverImage?: string | null;
+  faqs?: { question: string; answer: string }[];
 };
 
 /**
@@ -30,8 +31,8 @@ export type ReviewMeta = {
  */
 function isReview(tags: string[]): boolean {
   if (!tags || !Array.isArray(tags)) return false;
-  return tags.some(tag => 
-    tag.toLowerCase() === "reviews" || 
+  return tags.some(tag =>
+    tag.toLowerCase() === "reviews" ||
     tag.toLowerCase() === "review"
   );
 }
@@ -48,14 +49,14 @@ function generateExcerpt(content: string, maxLength: number = 150): string {
     .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1") // Remove links
     .replace(/---/g, "") // Remove separadores
     .trim();
-  
+
   if (plainText.length <= maxLength) return plainText;
-  
+
   // Corta no último espaço antes do limite
   const truncated = plainText.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(" ");
-  
-  return lastSpace > 0 
+
+  return lastSpace > 0
     ? truncated.substring(0, lastSpace) + "..."
     : truncated + "...";
 }
@@ -65,28 +66,28 @@ function generateExcerpt(content: string, maxLength: number = 150): string {
  */
 export async function getAllReviews(): Promise<ReviewMeta[]> {
   const allFiles = fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
-  
+
   const reviews = await Promise.all(
     allFiles.map(async (filename) => {
       const fullPath = path.join(postsDirectory, filename);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
-      
+
       // Verifica se é um review
       const tags = data.tags || [];
       if (!isReview(tags)) {
         return null;
       }
-      
+
       const slug = filename.replace(/\.md$/, "");
-      
+
       // Gera summary se não existir
       let summary = data.summary || data.description || "";
       if (!summary) {
         const { content } = matter(fileContents);
         summary = generateExcerpt(content);
       }
-      
+
       return {
         slug,
         title: data.title ?? "",
@@ -102,7 +103,7 @@ export async function getAllReviews(): Promise<ReviewMeta[]> {
       } as ReviewMeta;
     })
   );
-  
+
   // Filtra nulls e ordena por data (mais recente primeiro)
   return reviews
     .filter((review): review is ReviewMeta => review !== null)
@@ -115,33 +116,33 @@ export async function getAllReviews(): Promise<ReviewMeta[]> {
 export async function getReviewBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = path.join(postsDirectory, `${realSlug}.md`);
-  
+
   if (!fs.existsSync(fullPath)) {
     throw new Error(`Review not found: ${slug}`);
   }
-  
+
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-  
+
   // Verifica se é um review
   const tags = data.tags || [];
   if (!isReview(tags)) {
     throw new Error(`File ${slug} is not a review (missing "reviews" tag)`);
   }
-  
+
   // Processa conteúdo Markdown para HTML
   const processedContent = await remark().use(html).process(content);
   let contentHtml = processedContent.toString();
-  
+
   // Processa links externos (adiciona rel="noopener noreferrer" e rel="sponsored" para afiliados)
   contentHtml = processExternalLinks(contentHtml);
-  
+
   // Gera summary se não existir
   let summary = data.summary || data.description || "";
   if (!summary) {
     summary = generateExcerpt(content);
   }
-  
+
   return {
     slug: realSlug,
     meta: {
@@ -156,6 +157,7 @@ export async function getReviewBySlug(slug: string) {
       tags,
       featured: data.featured ?? false,
       coverImage: data.coverImage ?? null,
+      faqs: data.faqs || [], // Extract FAQs from frontmatter
     } as ReviewMeta,
     contentHtml,
   };
@@ -166,22 +168,32 @@ export async function getReviewBySlug(slug: string) {
  */
 export async function getReviewSlugs(): Promise<string[]> {
   const allFiles = fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
-  
+
   const reviewSlugs = await Promise.all(
     allFiles.map(async (filename) => {
       const fullPath = path.join(postsDirectory, filename);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
-      
+
       const tags = data.tags || [];
       if (!isReview(tags)) {
         return null;
       }
-      
+
       return filename.replace(/\.md$/, "");
     })
   );
-  
+
   return reviewSlugs.filter((slug): slug is string => slug !== null);
+}
+
+/**
+ * Obtém reviews relacionados (por enquanto, apenas os mais recentes exceto o atual)
+ */
+export async function getRelatedReviews(currentSlug: string, limit: number = 3): Promise<ReviewMeta[]> {
+  const allReviews = await getAllReviews();
+  return allReviews
+    .filter(review => review.slug !== currentSlug)
+    .slice(0, limit);
 }
 
