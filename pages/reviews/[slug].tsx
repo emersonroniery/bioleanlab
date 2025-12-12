@@ -4,7 +4,7 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { getReviewBySlug, getReviewSlugs, ReviewMeta } from "../../lib/reviews";
+import { getReviewBySlug, getReviewSlugs, ReviewMeta, getRelatedReviews } from "../../lib/reviews";
 import AdBlock from "../../components/AdBlock";
 import ReviewSummaryBox from "../../components/ReviewSummaryBox";
 import AuthorBio from "../../components/AuthorBio";
