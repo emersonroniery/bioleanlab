@@ -8,7 +8,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 
 import { getPostBySlug, getPostSlugs, PostMeta } from "../../lib/posts";
 
-import AdBlock from "../../components/AdBlock";
+
 
 import { generateSEOTags, generateArticleJSONLD, generateBreadcrumbJSONLD } from "../../lib/seo";
 
@@ -201,13 +201,7 @@ export default function Post({ post }: Props) {
 
 
 
-          {/* AdBlock Top */}
 
-          <div className="my-6">
-
-            <AdBlock slot="top-article" />
-
-          </div>
 
 
 
@@ -223,13 +217,7 @@ export default function Post({ post }: Props) {
 
 
 
-          {/* AdBlock Bottom */}
 
-          <div className="my-6">
-
-            <AdBlock slot="bottom-article" />
-
-          </div>
 
         </article>
 

@@ -5,7 +5,7 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { getReviewBySlug, getReviewSlugs, ReviewMeta } from "../../lib/reviews";
-import AdBlock from "../../components/AdBlock";
+
 import ReviewSummaryBox from "../../components/ReviewSummaryBox";
 import { generateSEOTags, generateBreadcrumbJSONLD } from "../../lib/seo";
 
@@ -135,10 +135,7 @@ export default function Review({ review }: Props) {
             </p>
           </div>
 
-          {/* AdBlock Top */}
-          <div className="my-6">
-            <AdBlock slot="top-article" />
-          </div>
+
 
           {/* Main Content */}
           <div
@@ -146,10 +143,7 @@ export default function Review({ review }: Props) {
             dangerouslySetInnerHTML={{ __html: review.contentHtml }}
           />
 
-          {/* AdBlock Bottom */}
-          <div className="my-6">
-            <AdBlock slot="bottom-article" />
-          </div>
+
         </article>
       </div>
     </Layout>

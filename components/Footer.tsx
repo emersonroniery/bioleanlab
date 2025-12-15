@@ -16,7 +16,7 @@ export default function Footer() {
 
           <p className="text-sm text-slate-600">
 
-            © {new Date().getFullYear()} BioLeanLab. All rights reserved.
+            © 2025 BioLeanLab. All rights reserved.
 
           </p>
 
