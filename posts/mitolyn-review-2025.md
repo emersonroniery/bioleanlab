@@ -1,7 +1,7 @@
 ---
 title: "Why 93% of Diets Fail: The 'Sleeping' Mitochondria Problem (And How to Fix It)"
 date: "2025-12-15"
-tags: ["reviews", "weight loss", "biohacking"]
+tags: ["reviews", "weight loss", "biohacking", "supplements", "nutrition"]
 productName: "Mitolyn"
 rating: 4.9
 affiliateLink: "https://84d5d--v6k1a8zagyq-c2h7z2w.hop.clickbank.net"

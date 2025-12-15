@@ -1,7 +1,7 @@
 ---
 title: "Knee Pain? It’s Not 'Age', It’s Your Synovial Jelly (Here’s How to Refill It)"
 date: "2025-12-15"
-tags: ["reviews", "joint pain", "health"]
+tags: ["reviews", "joint pain", "health", "supplements"]
 productName: "Joint Genesis"
 rating: 4.9
 affiliateLink: "https://a58e5ttqyt3kdsaf19xmrdqv8w.hop.clickbank.net"

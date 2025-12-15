@@ -1,7 +1,7 @@
 ---
 title: "Stop Brushing So Hard: The 'Melting Candy' Trick for Perfect Teeth & Gums"
 date: "2025-12-15"
-tags: ["reviews", "dental health", "supplements"]
+tags: ["reviews", "dental health", "supplements", "nutrition"]
 productName: "ProDentim"
 rating: 4.8
 affiliateLink: "https://00fa0y0-4kb92v5cxbs71kw7fc.hop.clickbank.net"
