@@ -33,6 +33,10 @@ function generateSitemap(
 
     { url: "/contact", priority: 0.6, changefreq: "monthly" },
 
+    { url: "/best/weight-loss-supplements", priority: 0.9, changefreq: "weekly" },
+
+    { url: "/comparisons/mitolyn-vs-ikaria", priority: 0.8, changefreq: "monthly" },
+
   ];
 
 
@@ -71,9 +75,9 @@ function generateSitemap(
 
 ${allPages
 
-  .map(
+      .map(
 
-    (page) => `  <url>
+        (page) => `  <url>
 
     <loc>${SITE_URL}${page.url}</loc>
 
@@ -85,9 +89,9 @@ ${allPages
 
   </url>`
 
-  )
+      )
 
-  .join("\n")}
+      .join("\n")}
 
 </urlset>`;
 

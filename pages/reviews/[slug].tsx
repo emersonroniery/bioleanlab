@@ -4,10 +4,15 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { getReviewBySlug, getReviewSlugs, ReviewMeta } from "../../lib/reviews";
-
+import { getReviewBySlug, getReviewSlugs, ReviewMeta, getRelatedReviews } from "../../lib/reviews";
 import ReviewSummaryBox from "../../components/ReviewSummaryBox";
-import { generateSEOTags, generateBreadcrumbJSONLD } from "../../lib/seo";
+import AuthorBio from "../../components/AuthorBio";
+import FAQSection from "../../components/FAQSection";
+import PrimaryCTA from "../../components/PrimaryCTA";
+import ProductScorecard from "../../components/ProductScorecard";
+import RelatedPosts from "../../components/RelatedPosts";
+import { getProductLink } from "../../config/affiliates";
+import { generateSEOTags, generateBreadcrumbJSONLD, generateFAQJSONLD } from "../../lib/seo";
 
 type Props = {
   review: {
@@ -15,11 +20,12 @@ type Props = {
     meta: ReviewMeta;
     contentHtml: string;
   };
+  relatedReviews: ReviewMeta[];
 };
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bioleanlab.com";
 
-export default function Review({ review }: Props) {
+export default function Review({ review, relatedReviews }: Props) {
   const canonical = `${SITE_URL}/reviews/${review.slug}`;
   const ogImage = review.meta.coverImage ? `${SITE_URL}${review.meta.coverImage}` : undefined;
 
@@ -41,6 +47,10 @@ export default function Review({ review }: Props) {
     { name: "Reviews", url: `${SITE_URL}/reviews` },
     { name: review.meta.title, url: canonical },
   ]);
+
+  const faqJSONLD = review.meta.faqs && review.meta.faqs.length > 0
+    ? generateFAQJSONLD(review.meta.faqs)
+    : null;
 
   // JSON-LD para Review (Schema.org)
   const reviewJSONLD = {
@@ -116,6 +126,12 @@ export default function Review({ review }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJSONLD) }}
         />
+        {faqJSONLD && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJSONLD) }}
+          />
+        )}
       </Head>
 
       <div className="max-w-3xl mx-auto py-12 md:py-16 px-4">
@@ -127,6 +143,24 @@ export default function Review({ review }: Props) {
           {/* Review Summary Box */}
           <ReviewSummaryBox review={review.meta} />
 
+          {/* Primary CTA Top */}
+          {review.meta.productName && (
+            <PrimaryCTA
+              productName={review.meta.productName}
+              href={getProductLink(review.meta.slug)}
+              discountText={getProductLink(review.meta.slug).includes("discount") ? "Special Discount Available" : undefined}
+              className="my-6 shadow-md border-emerald-200 bg-emerald-50/50"
+            />
+          )}
+
+          {/* Product Scorecard */}
+          {review.meta.productName && review.meta.rating && (
+            <ProductScorecard
+              productName={review.meta.productName}
+              overallRating={review.meta.rating}
+            />
+          )}
+
           <div className="bg-gray-100 p-4 rounded-md mb-6 text-sm text-gray-600 border-l-4 border-blue-500">
             <p>
               <strong>Transparency Disclosure:</strong> This content is reader-supported.
@@ -135,14 +169,27 @@ export default function Review({ review }: Props) {
             </p>
           </div>
 
-
-
           {/* Main Content */}
           <div
             className="prose prose-lg max-w-none prose-headings:tracking-tight prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-900"
             dangerouslySetInnerHTML={{ __html: review.contentHtml }}
           />
 
+          <AuthorBio />
+
+          <FAQSection faqs={review.meta.faqs || []} />
+
+          {/* Related Posts */}
+          <RelatedPosts posts={relatedReviews} />
+
+          {/* Primary CTA Bottom */}
+          {review.meta.productName && (
+            <PrimaryCTA
+              productName={review.meta.productName}
+              href={getProductLink(review.meta.slug)}
+              className="mb-12 border-2 border-emerald-500 bg-emerald-50"
+            />
+          )}
 
         </article>
       </div>
@@ -165,10 +212,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
   const review = await getReviewBySlug(slug);
+  const relatedReviews = await getRelatedReviews(slug, 3);
 
   return {
     props: {
       review,
+      relatedReviews,
     },
   };
 };
