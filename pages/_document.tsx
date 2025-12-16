@@ -12,6 +12,9 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
+        {/* Emergency CSS Fix */}
+        <link rel="stylesheet" href="/styles.css?v=urgent" />
+
         {/* Carregar fonte de forma não-bloqueante - Otimizado */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
