@@ -11,7 +11,7 @@ featured: true
 coverImage: "/images/mitolyn.png"
 ---
 
-![Mitolyn Hero Image](https://placehold.co/800x450/png?text=Mitochondrial+Optimization)
+![Mitolyn Hero Image](https://placehold.co/800x400?text=Product+Review)
 
 *Affiliate Disclosure: This article contains affiliate links. We may earn a commission if you make a purchase, at no extra cost to you. Our reviews are based on rigorous analysis.*
 
@@ -27,7 +27,7 @@ You’ve cut calories, you’ve spent hours at the gym, and you’ve said no to 
 
 Imagine trying to drive a car with the parking brake on. No matter how much gas you give it (or how little), you aren’t going anywhere fast. This is exactly what is happening inside your body.
 
-![Sleeping Mitochondria Illustration](https://placehold.co/600x400/png?text=Sleeping+Cells+vs+Active+Cells)
+![Sleeping Mitochondria Illustration](https://placehold.co/600x300?text=Evidence)
 
 Your **mitochondria** are the power plants of your cells. They are responsible for burning fat and creating energy. When they are young and healthy, they burn through calories like a furnace. But as we age, and under the stress of modern toxins, these mitochondria can become dormant or inefficient.
 

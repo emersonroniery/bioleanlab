@@ -11,7 +11,7 @@ featured: true
 coverImage: null
 ---
 
-![ProDentim Hero Image](https://placehold.co/800x450/png?text=Probiotic+Dental+Care)
+![ProDentim Hero Image](https://placehold.co/800x400?text=Product+Review)
 
 *Affiliate Disclosure: This article contains affiliate links. We may earn a commission if you make a purchase, at no extra cost to you. Our reviews are based on rigorous analysis.*
 
@@ -27,7 +27,7 @@ You’ve been told that to have perfect teeth, you need to brush harder, floss m
 
 Your mouth is an ecosystem. When it’s balanced, your saliva is full of protective bacteria that remineralize your enamel and keep your gums pink and healthy.
 
-![Mouth Microbiome Illustration](https://placehold.co/600x400/png?text=Oral+Microbiome+Balance)
+![Mouth Microbiome Illustration](https://placehold.co/600x300?text=Evidence)
 
 But modern dental products are like nuclear bombs. They kill everything—good and bad. When the good bacteria die, the "bad" bacteria (the ones that cause cavities and bad breath) take over completely. This is why you can brush three times a day and *still* get cavities.
 

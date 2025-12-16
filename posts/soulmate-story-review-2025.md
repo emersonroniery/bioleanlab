@@ -11,6 +11,8 @@ featured: false
 coverImage: null
 ---
 
+![Soulmate Story Hero Image](https://placehold.co/800x400?text=Product+Review)
+
 *Affiliate Disclosure: This article contains affiliate links. We may earn a commission if you make a purchase, at no extra cost to you. Our reviews are based on rigorous analysis.*
 
 You swipe left. You swipe right. You go on dates that are "fine" but lack that spark. You wonder, "Is my person even out there?" The answer is yes. And thanks to a unique psychic artist, you can see their face before you even meet them. <a href="https://8ff3bp1zxn9ebv2mptwbzq0dag.hop.clickbank.net" target="_blank" rel="noopener noreferrer">See the drawings</a>.
@@ -18,6 +20,8 @@ You swipe left. You swipe right. You go on dates that are "fine" but lack that s
 ## The Psychic Sketch
 
 Master Wang is a famous psychic artist in China who has spent his life matching soulmates. He doesn't just look at stars; he connects with your energy to visualize the person destiny has bound to you.
+
+![Psychic Drawing Illustration](https://placehold.co/600x300?text=Evidence)
 
 He then sketches them with incredible detail.
 
