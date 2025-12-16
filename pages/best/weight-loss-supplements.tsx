@@ -14,30 +14,34 @@ const products = [
         bestFor: "Stubborn Fat",
         priceLevel: "$$$",
         link: AFFILIATE_LINKS.mitolyn?.url || "#",
-    },
-    {
-        name: "Ikaria Lean Belly Juice",
-        rating: 4.8,
-        highlight: "Uric Acid Control",
-        bestFor: "Overall Health",
-        priceLevel: "$$",
-        link: AFFILIATE_LINKS.ikaria?.url || "#",
-    },
-    {
-        name: "The Brain Song",
-        rating: 4.5,
-        highlight: "Cognitive Approach",
-        bestFor: "Stress Eaters",
-        priceLevel: "$",
-        link: AFFILIATE_LINKS["the-brain-song"]?.url || "#",
+        imageSrc: "/images/mitolyn.png",
     },
     {
         name: "ProDentim",
-        rating: 4.4,
+        rating: 4.8,
         highlight: "Oral Microbiome",
         bestFor: "Gum Health + Detox",
         priceLevel: "$$",
         link: AFFILIATE_LINKS.prodentim?.url || "#",
+        imageSrc: "/images/prodentim.jpg",
+    },
+    {
+        name: "Joint Genesis",
+        rating: 4.7,
+        highlight: "Synovial Fluid",
+        bestFor: "Joint Pain & Mobility",
+        priceLevel: "$$",
+        link: AFFILIATE_LINKS["joint-genesis"]?.url || "#",
+        imageSrc: "/images/joint-genesis.png",
+    },
+    {
+        name: "Ikaria Lean Belly Juice",
+        rating: 4.6,
+        highlight: "Uric Acid Control",
+        bestFor: "Overall Health",
+        priceLevel: "$$",
+        link: AFFILIATE_LINKS.ikaria?.url || "#",
+        // imageSrc: "/images/ikaria.png", // Add if available
     },
 ];
 
@@ -102,13 +106,46 @@ export default function BestSupplements() {
                                     </div>
                                 </div>
                                 <div className="md:w-64 flex-shrink-0">
-                                    <PrimaryCTA productName="Mitolyn" href={AFFILIATE_LINKS.mitolyn.url} discountText="Save $300 today" />
+                                    <PrimaryCTA productName="Mitolyn" href={AFFILIATE_LINKS.mitolyn.url} discountText="Save $300 today" imageSrc="/images/mitolyn.png" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="prodentim">
+                            <h3 className="text-2xl font-bold text-slate-900">2. ProDentim</h3>
+                            <div className="flex flex-col md:flex-row gap-6 mt-4">
+                                <div className="flex-1">
+                                    <p>
+                                        ProDentim offers a unique approach by focusing on oral health. It repopulates your mouth with beneficial bacteria, which can have surprising downstream effects on digestion and weight management.
+                                    </p>
+                                    <div className="mt-4">
+                                        <Link href="/reviews/prodentim-review-2025" className="text-emerald-600 font-bold hover:underline">
+                                            Read Full ProDentim Review &rarr;
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="md:w-64 flex-shrink-0">
+                                    <PrimaryCTA productName="ProDentim" href={AFFILIATE_LINKS.prodentim.url} discountText="50% OFF Today" imageSrc="/images/prodentim.jpg" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="joint-genesis">
+                            <h3 className="text-2xl font-bold text-slate-900">3. Joint Genesis</h3>
+                            <div className="flex flex-col md:flex-row gap-6 mt-4">
+                                <div className="flex-1">
+                                    <p>
+                                        Joint pain can be a major barrier to exercise. Joint Genesis targets synovial fluid production, making it easier to stay active and burn calories.
+                                    </p>
+                                </div>
+                                <div className="md:w-64 flex-shrink-0">
+                                    <PrimaryCTA productName="Joint Genesis" href={AFFILIATE_LINKS["joint-genesis"].url} discountText="Restore Mobility" imageSrc="/images/joint-genesis.png" />
                                 </div>
                             </div>
                         </div>
 
                         <div id="ikaria">
-                            <h3 className="text-2xl font-bold text-slate-900">2. Ikaria Lean Belly Juice</h3>
+                            <h3 className="text-2xl font-bold text-slate-900">4. Ikaria Lean Belly Juice</h3>
                             <p>
                                 A unique powdered supplement that targets ceramides—toxic lipid molecules that can block metabolism. It's distinct from pill-based burners and offers a comprehensive nutrient blend.
                             </p>
@@ -125,8 +162,8 @@ export default function BestSupplements() {
                         {/* Add more sections as needed */}
                     </div>
 
-                </div>
-            </div>
-        </Layout>
+                </div >
+            </div >
+        </Layout >
     );
 }

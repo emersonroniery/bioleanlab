@@ -5,11 +5,21 @@ interface PrimaryCTAProps {
     href: string;
     discountText?: string;
     className?: string;
+    imageSrc?: string;
 }
 
-export default function PrimaryCTA({ productName, href, discountText, className = "" }: PrimaryCTAProps) {
+export default function PrimaryCTA({ productName, href, discountText, className = "", imageSrc }: PrimaryCTAProps) {
     return (
         <div className={`my-8 text-center p-6 bg-slate-50 border-2 border-dashed border-emerald-500 rounded-xl ${className}`}>
+            {imageSrc && (
+                <div className="mb-4 flex justify-center">
+                    <img
+                        src={imageSrc}
+                        alt={`${productName} bottle`}
+                        className="h-48 object-contain hover:scale-105 transition-transform duration-300 drop-shadow-md"
+                    />
+                </div>
+            )}
             <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Ready to try {productName}?
             </h3>

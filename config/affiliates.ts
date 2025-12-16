@@ -24,6 +24,10 @@ export const AFFILIATE_LINKS: Record<string, AffiliateProduct> = {
         name: "The Brain Song",
         url: "https://brainsong.com?aff_id=123", // Replace with real link
     },
+    "joint-genesis": {
+        name: "Joint Genesis",
+        url: "https://jointgenesis.com?aff_id=123", // Replace with real link
+    },
     // Add other products here
 };
 

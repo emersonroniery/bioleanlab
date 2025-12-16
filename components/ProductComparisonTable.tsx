@@ -7,6 +7,7 @@ type ProductRow = {
     bestFor: string;
     priceLevel: string;
     link: string;
+    imageSrc?: string;
 };
 
 interface ProductComparisonTableProps {
@@ -31,7 +32,14 @@ export default function ProductComparisonTable({ products }: ProductComparisonTa
                     {products.map((product, index) => (
                         <tr key={index} className="bg-white border-b border-slate-100 hover:bg-slate-50 transition-colors">
                             <td className="px-6 py-4 font-bold text-slate-900 text-base">
-                                {index + 1}. {product.name}
+                                <div className="flex items-center gap-4">
+                                    {product.imageSrc && (
+                                        <div className="flex-shrink-0 w-16 h-16 bg-slate-100 rounded-lg p-1 flex items-center justify-center">
+                                            <img src={product.imageSrc} alt={product.name} className="max-h-full max-w-full object-contain" />
+                                        </div>
+                                    )}
+                                    <span>{index + 1}. {product.name}</span>
+                                </div>
                             </td>
                             <td className="px-6 py-4 text-center">
                                 <div className="flex items-center justify-center text-yellow-500 font-bold">
